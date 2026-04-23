@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✨ 五一川西出游攻略 | 4.29–5.5 四女行</title>
+<style>
+:root{--pink:#f472b6;--pink-light:#fce7f3;--pink-mid:#fbcfe8;--teal:#0d9488;--teal-light:#ccfbf1;--amber:#d97706;--amber-light:#fef3c7;--red:#dc2626;--red-light:#fee2e2;--blue:#2563eb;--blue-light:#dbeafe;--gray:#6b7280;--gray-light:#f9fafb;--border:#e5e7eb;--text:#1f2937}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#fdf2f8 0%,#f0fdfa 100%);color:var(--text);line-height:1.7;padding:20px}
+.container{max-width:900px;margin:0 auto}
+.cover{background:linear-gradient(135deg,#ec4899 0%,#8b5cf6 50%,#06b6d4 100%);border-radius:20px;padding:40px 30px;text-align:center;color:white;margin-bottom:24px}
+.cover h1{font-size:2rem;font-weight:800;margin-bottom:8px}
+.cover .subtitle{font-size:1.05rem;opacity:.9;margin-bottom:16px}
+.cover .tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.cover .tag{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:4px 14px;font-size:.82rem}
+.weather-banner{background:linear-gradient(135deg,#fef3c7,#fde68a);border:2px solid #f59e0b;border-radius:16px;padding:18px 20px;margin-bottom:20px}
+.weather-banner h2{color:#92400e;font-size:1rem;margin-bottom:12px}
+.weather-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;margin-top:8px}
+.wc{background:white;border-radius:10px;padding:10px;text-align:center;font-size:.8rem;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+.wc.rain{background:linear-gradient(135deg,#dbeafe,#bfdbfe)}
+.wc.cloudy{background:#f3f4f6}
+.wc .wdate{color:var(--gray);font-size:.75rem}
+.wc .wcity{font-weight:600;margin:2px 0;font-size:.82rem}
+.wc .wicon{font-size:1.4rem;margin:3px 0}
+.wc .wtemp{font-weight:700}
+.rain-notice{background:var(--blue-light);border-left:4px solid var(--blue);border-radius:8px;padding:10px 14px;margin-top:10px;font-size:.86rem}
+.alert{border-radius:12px;padding:14px 18px;margin-bottom:16px;display:flex;gap:10px;align-items:flex-start}
+.alert-warn{background:var(--red-light);border-left:4px solid var(--red)}
+.alert-tip{background:var(--amber-light);border-left:4px solid var(--amber)}
+.alert-info{background:var(--teal-light);border-left:4px solid var(--teal)}
+.alert-pink{background:var(--pink-light);border-left:4px solid var(--pink)}
+.alert .aicon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+.alert .acontent h3{font-size:.92rem;font-weight:700;margin-bottom:5px}
+.alert .acontent p,.alert .acontent li{font-size:.85rem;line-height:1.6}
+.alert .acontent ul{padding-left:16px}
+.day-card{background:white;border-radius:18px;box-shadow:0 4px 18px rgba(0,0,0,.07);margin-bottom:24px;overflow:hidden;border:1px solid var(--border)}
+.day-header{padding:18px 22px 14px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.day-badge{background:linear-gradient(135deg,#ec4899,#8b5cf6);color:white;border-radius:12px;padding:7px 14px;font-size:.88rem;font-weight:700;white-space:nowrap;flex-shrink:0}
+.day-title{font-size:1.1rem;font-weight:700}
+.day-subtitle{font-size:.82rem;color:var(--gray);margin-top:2px}
+.wpill{margin-left:auto;border-radius:18px;padding:3px 11px;font-size:.78rem;white-space:nowrap;flex-shrink:0;border:1px solid var(--border);background:var(--gray-light)}
+.wpill.rainy{background:var(--blue-light);border-color:#93c5fd;color:var(--blue)}
+.wpill.ok{background:var(--teal-light);border-color:#6ee7b7;color:var(--teal)}
+.day-body{padding:18px 22px}
+.tl{position:relative;padding-left:26px}
+.tl::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,#ec4899,#8b5cf6,#06b6d4);border-radius:2px}
+.tli{position:relative;margin-bottom:16px}
+.tli:last-child{margin-bottom:0}
+.tldot{position:absolute;left:-23px;top:6px;width:11px;height:11px;border-radius:50%;background:white;border:3px solid #ec4899}
+.tldot.t{border-color:#3b82f6}
+.tldot.f{border-color:#f59e0b}
+.tldot.s{border-color:#10b981}
+.tldot.w{border-color:#ef4444}
+.tltime{font-size:.76rem;color:var(--gray);font-weight:600;margin-bottom:1px}
+.tltitle{font-weight:700;font-size:.95rem;margin-bottom:3px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.tldesc{font-size:.85rem;color:#374151;line-height:1.65}
+.tldesc ul{padding-left:16px;margin-top:3px}
+.tldesc li{margin-bottom:2px}
+.bdg{display:inline-flex;align-items:center;border-radius:5px;padding:1px 7px;font-size:.72rem;font-weight:600;white-space:nowrap}
+.bdg-pink{background:var(--pink-light);color:#be185d}
+.bdg-blue{background:var(--blue-light);color:#1d4ed8}
+.bdg-green{background:var(--teal-light);color:#065f46}
+.bdg-amber{background:var(--amber-light);color:#92400e}
+.bdg-red{background:var(--red-light);color:#991b1b}
+.bdg-purple{background:#ede9fe;color:#5b21b6}
+.plan-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0}
+@media(max-width:600px){.plan-grid{grid-template-columns:1fr}}
+.plan-box{border-radius:12px;padding:14px;border:2px solid}
+.plan-a{border-color:#ec4899;background:#fdf2f8}
+.plan-b{border-color:#8b5cf6;background:#f5f3ff}
+.plan-h{font-weight:700;font-size:.95rem;margin-bottom:8px}
+.plan-a .plan-h{color:#be185d}
+.plan-b .plan-h{color:#5b21b6}
+.plan-box ol{padding-left:18px;font-size:.84rem;line-height:1.7}
+.plan-box li{margin-bottom:3px}
+.plan-note{font-size:.78rem;margin-top:6px;padding:5px 8px;background:rgba(255,255,255,.7);border-radius:7px;color:var(--gray)}
+.sdiv{display:flex;align-items:center;gap:10px;margin:20px 0 14px;color:var(--gray);font-size:.82rem;font-weight:600}
+.sdiv::before,.sdiv::after{content:'';flex:1;height:1px;background:var(--border)}
+.copy-wrap{background:#1e1e2e;border-radius:14px;padding:20px;margin-top:20px;position:relative}
+.copy-wrap h4{color:#f38ba8;font-size:.9rem;margin-bottom:10px;font-family:-apple-system,sans-serif}
+.copy-btn{position:absolute;top:16px;right:16px;background:#ec4899;color:white;border:none;border-radius:7px;padding:5px 12px;font-size:.78rem;cursor:pointer;font-weight:600;font-family:-apple-system,sans-serif}
+.copy-btn:hover{background:#be185d}
+.spot{display:inline-flex;align-items:center;gap:3px;border-radius:5px;padding:1px 7px;font-size:.72rem;font-weight:600;white-space:nowrap;margin:1px 2px}
+.spot-go{background:#dcfce7;color:#166534;border:1px solid #86efac}
+.spot-car{background:#fef9c3;color:#854d0e;border:1px solid #fde047}
+.spot-skip{background:#f3f4f6;color:#9ca3af;border:1px solid #d1d5db}
+.legend{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 12px;font-size:.78rem;align-items:center}
+#copytext{color:#cdd6f4;font-size:.82rem;line-height:1.9;white-space:pre-wrap;font-family:'SF Mono','Consolas',monospace;max-height:600px;overflow-y:auto}
+table.it{width:100%;border-collapse:collapse;font-size:.84rem;margin:8px 0}
+table.it th{background:var(--pink-light);color:#be185d;padding:7px 10px;text-align:left;font-weight:600;border-bottom:2px solid var(--pink-mid)}
+table.it td{padding:7px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+table.it tr:nth-child(even) td{background:var(--gray-light)}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- 封面 -->
+<div class="cover">
+  <h1>✨ 五一川西出游攻略</h1>
+  <div class="subtitle">4月29日 — 5月5日 · 成都 · 九寨沟 · 乐山 · 四女行</div>
+  <div class="tags">
+    <span class="tag">👩‍👩‍👧‍👧 2位30岁女生 + 2位妈妈</span>
+    <span class="tag">🌿 荷叶寨内民宿 4.30入住</span>
+    <span class="tag">🍜 乐山美食街步行区 5.2入住</span>
+    <span class="tag">🏙️ 成都芳草街地铁站 5.3-5.4</span>
+    <span class="tag">🚂 5/3乐山17:53→成都南18:25</span>
+    <span class="tag">🌧️ 全程多雨 · 雨具必备</span>
+  </div>
+</div>
+
+<!-- 天气总览 -->
+<div class="weather-banner">
+  <h2>🌤️ 全程天气预报（中央气象台 · 4月23日更新 · 建议出发前重新核查最新预报）</h2>
+  <div class="weather-grid">
+    <div class="wc cloudy"><div class="wdate">4/29 周二</div><div class="wcity">📍成都</div><div class="wicon">⛅</div><div class="wtemp">~28/16℃</div><div>多云</div></div>
+    <div class="wc rain"><div class="wdate">4/30 周三</div><div class="wcity">📍九寨沟</div><div class="wicon">🌧️</div><div class="wtemp">23/11℃</div><div><b>雨转阴</b></div></div>
+    <div class="wc rain"><div class="wdate">5/1 周四</div><div class="wcity">📍九寨沟</div><div class="wicon">🌧️</div><div class="wtemp">21/9℃</div><div><b>持续降雨</b></div></div>
+    <div class="wc rain"><div class="wdate">5/2 周五</div><div class="wcity">📍九寨→乐山</div><div class="wicon">🌧️→🌥️</div><div class="wtemp">22℃/26℃</div><div>九有雨·乐阴</div></div>
+    <div class="wc rain"><div class="wdate">5/3 周六</div><div class="wcity">📍乐山</div><div class="wicon">🌦️</div><div class="wtemp">25/19℃</div><div><b>雨转阴</b></div></div>
+    <div class="wc rain"><div class="wdate">5/4 周日</div><div class="wcity">📍成都</div><div class="wicon">🌧️</div><div class="wtemp">26/19℃</div><div>有雨</div></div>
+    <div class="wc rain"><div class="wdate">5/5 周一</div><div class="wcity">📍成都/返程</div><div class="wicon">🌦️</div><div class="wtemp">27/18℃</div><div>雨转阴</div></div>
+  </div>
+  <div class="rain-notice">
+    <b>⚠️ 重点：九寨沟4/30—5/2持续降雨，最低气温仅9℃！</b><br>
+    好消息："晴看水、雨看山、半晴半雨看云烟"，雨雾九寨沟别有仙境感，值得期待。<br>
+    必备装备：<b>防水冲锋衣 / 折叠雨伞 + 防滑运动鞋</b>（木栈道雨天极滑）。乐山大佛5/3有雨，九曲栈道禁穿裙子拖鞋。
+  </div>
+</div>
+
+<!-- 重要预约提醒 -->
+<div class="alert alert-warn">
+  <div class="aicon">🎫</div>
+  <div class="acontent">
+    <h3>出发前必须完成的预约（现场无票！）</h3>
+    <ul>
+      <li><b>九寨沟门票</b>：景区不售现场票！微信公众号"九寨沟"或"阿坝旅游网"实名预约，五一建议提前3-5天。约￥190/人（含景区观光车）</li>
+      <li><b>乐山大佛</b>：公众号"乐山大佛景区"提前购票，约￥80/人，五一期间同样限流</li>
+      <li><b>成都大熊猫基地</b>：公众号"成都大熊猫繁育研究基地"实名预约，约￥55/人，五一提前3天</li>
+      <li><b>高铁票</b>：成都东→黄龙九寨 C5782/C5783 06:45早班（1h39min直达，二等座￥143），尽早抢票</li>
+    </ul>
+  </div>
+</div>
+
+<div class="alert alert-tip">
+  <div class="aicon">🧳</div>
+  <div class="acontent">
+    <h3>行李流转策略（三地转换）</h3>
+    <ul>
+      <li>4/29 大件行李存成都酒店，前往九寨沟只带轻便小包/登山包</li>
+      <li>4/30 入住荷叶寨民宿，可联系民宿提前转运，或抵达后寄存至沟口</li>
+      <li>5/1 返程前行李托存民宿，出沟前取走即可</li>
+      <li>5/2 直接携行李转战乐山，住乐山美食街酒店无需再分拆</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== DAY 1 ===== -->
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-badge">Day 1</div>
+    <div>
+      <div class="day-title">🛬 抵达成都 · 机场→市区 · 轻松Citywalk</div>
+      <div class="day-subtitle">4月29日（周二）· 到达日，节奏轻松，以休息调整为主</div>
+    </div>
+    <div class="wpill ok">⛅ ~28/16℃ 多云晴好</div>
+  </div>
+  <div class="day-body">
+    <div class="tl">
+      <div class="tli">
+        <div class="tldot t"></div>
+        <div class="tltime">09:00 落地</div>
+        <div class="tltitle">✈️ 天府机场T2抵达 <span class="bdg bdg-blue">美兰T2出发</span></div>
+        <div class="tldesc">出机场→地铁18号线直达车（天府机场站上车）→ 火车南站约33分钟 → 换乘至成都东/南广场附近酒店<br>
+        💡 <b>强烈建议住成都东站周边</b>（明早6:45高铁，步行即到站，省去打车焦虑）</div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">11:20 — 13:00</div>
+        <div class="tltitle">🏨 入住酒店 · 整理行李</div>
+        <div class="tldesc">⚠️ 大件行李留成都酒店，只打包九寨沟需要的（冲锋衣、换洗衣物、防水包），次日一早轻装出发<br>
+        换衣+吃顿正餐恢复精力</div>
+      </div>
+      <div class="tli">
+        <div class="tldot f"></div>
+        <div class="tltime">13:00 — 14:30</div>
+        <div class="tltitle">🍜 午餐：成都初体验</div>
+        <div class="tldesc">
+          <b>推荐餐厅（成都东站/春熙路周边）：</b>
+          <ul>
+            <li><b>钟水饺（总店·提督街）</b> — 成都三大老字号之一，红油钟水饺+甜水面是标配，人均25-40元。皮薄馅嫩，红油香而不燥，最经典的成都味道</li>
+            <li><b>龙抄手（春熙路店）</b> — 另一家百年老字号，招牌龙抄手（红汤/清汤/海味三种口味），人均30-50元。配一份蛋烘糕当饭后甜点</li>
+            <li><b>陈麻婆豆腐（旗舰店·青华路）</b> — 正宗麻婆豆腐发源地，麻、辣、烫、香、酥、嫩、鲜七字真言。人均50-70元，必点麻婆豆腐+回锅肉+宫保鸡丁</li>
+          </ul>
+          💡 <b>成都东站西广场附近</b>也有不少本地小馆子（人均20-40元），走几步进居民区就能找到，不必非去景区
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">14:30 — 18:30</div>
+        <div class="tltitle">🚶 下午Citywalk（轻松版，约4km）</div>
+        <div class="tldesc">
+          <b>推荐动线：</b>大慈寺（唐代古寺，太古里旁） → 远洋太古里随意转转 → 锦江河边散步（傍晚好拍）<br>
+          若体力充沛：打车至宽窄巷子（车程约20分钟），感受老成都院落气息<br>
+          💡 节奏提示：4位女生有2位妈妈，下午不必走完所有点，找个茶馆坐坐是成都精髓
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot f"></div>
+        <div class="tltime">19:00 — 21:00</div>
+        <div class="tltitle">🔥 晚餐：牛油火锅 / 串串香</div>
+        <div class="tldesc">
+          <b>推荐餐厅（成都东站/市区）：</b>
+          <ul>
+            <li><b>蜀九香火锅（春熙路/东站附近有店）</b> — 成都本地人气火锅，牛油锅底正宗，毛肚/鸭肠/黄喉必点，人均100-130元。⚠️五一排队长，提前1小时在美团取号</li>
+            <li><b>钢管厂五区小郡肝串串香（全国连锁·总店在成都）</b> — 成都串串香代表作！牛肉小郡肝/麻辣牛肉/折耳根牛肉是灵魂，人均50-70元能吃很爽。找到最近的分店即可</li>
+            <li><b>飘香火锅/渝味晓宇火锅（东站附近）</b> — 如果不想排太久的队，这两家都是本地人中评价很好的中档火锅，人均80-100元，口味地道</li>
+          </ul>
+          💡 五一期间火锅排队长，<b>建议15:00就在美团/大众点评远程取号</b>，到时间再过去
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot s"></div>
+        <div class="tltime">21:00 返回酒店</div>
+        <div class="tltitle">🛏️ 早睡！明天6:45高铁</div>
+        <div class="tldesc">⚠️ <b>最迟21:30必须回酒店休息</b>，次日须5:45出门去火车站，高铁绝不能误！<br>
+        提前准备好：明天九寨沟用的冲锋衣、雨伞、换洗衣物打包好</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== DAY 2 ===== -->
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-badge">Day 2</div>
+    <div>
+      <div class="day-title">🏔️ 成都→九寨沟 · 下午Y字左支+盆景滩回民宿</div>
+      <div class="day-subtitle">4月30日（周三）· 高铁+大巴抵达，下午小半日游，走左支轻松线，17-18点撤回民宿</div>
+    </div>
+    <div class="wpill rainy">🌧️ 23/11℃ 雨转阴</div>
+  </div>
+  <div class="day-body">
+
+    <div class="alert alert-warn" style="margin-bottom:14px">
+      <div class="aicon">⚠️</div>
+      <div class="acontent">
+        <h3>今日天气 + 路程提醒</h3>
+        <p>九寨沟雨转阴，最低11℃，体感更冷。<b>冲锋衣+折叠伞+防滑鞋必穿</b>。高海拔2000m+禁止剧烈运动。<br>
+        ⏱️ <b>五一期堵车预警：</b>黄龙九寨站→景区的接驳路约90km，盘山路+五一车流量大，正常1.5h，堵车可能2-3h。以下时间已预留堵车缓冲，实际到达若早/晚可灵活调整。</p>
+      </div>
+    </div>
+
+    <div class="alert alert-info" style="margin-bottom:14px">
+      <div class="aicon">🍓</div>
+      <div class="acontent">
+        <h3>今日策略（B Plan · Day 1）</h3>
+        <p>今天只走<b>Y字左支（则查洼沟）</b>：长海→五彩池→诺日朗瀑布，再坐车到盆景滩，然后回民宿。<br>
+        <b>⭐ 为什么今天必须走"诺日朗→盆景滩"这段中心线？</b>因为明天12点前这段几乎无车（观光车只送右支），去的话太突兀有检票风险。今天走掉，明天下午就不需要再来了。</p>
+      </div>
+    </div>
+
+    <div class="legend">
+      <span class="spot spot-go">🚶 下车深度游</span>
+      <span class="spot spot-car">🚌 车上观览</span>
+      <span class="spot spot-skip">⏭️ 可跳过</span>
+    </div>
+
+    <div class="tl">
+      <div class="tli">
+        <div class="tldot t"></div>
+        <div class="tltime">05:45 出发</div>
+        <div class="tltitle">🚆 成都东站 乘高铁C5782 <span class="bdg bdg-blue">06:45发车</span></div>
+        <div class="tldesc">
+          酒店步行至成都东站（成都东站西广场海友酒店出发很近），建议05:45出发（留20分钟过安检）<br>
+          车次：C5782/C5783，成都东 06:45 → 黄龙九寨站 08:24，1小时39分直达<br>
+          备选：C9470 08:12发（若6:45票抢不到可选此车，但会压缩下午游玩时间）
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot t"></div>
+        <div class="tltime">08:24 — 11:30 <span class="bdg bdg-amber">预留1.5-3h堵车缓冲</span></div>
+        <div class="tltitle">🚌 黄龙九寨站→九寨沟景区口</div>
+        <div class="tldesc">
+          ⚠️ <b>高铁站≠景区门口</b>，还需约90km接驳车程<br>
+          <ul>
+            <li>官方接驳大巴：在<b>藏王宴停车场</b>候车，08:30-08:55时段班次</li>
+            <li>🚫 不要轻信站外拉客黑车</li>
+          </ul>
+          <b>行李处理：</b>到达景区口后，行李寄存至<b>彭丰村「私享旅行酒店」</b>（位于藏王广场肯德基隔壁，网红西红柿汤锅隔壁），脚程10-20分钟。民宿会统一转运至沟内荷叶寨
+          <div class="plan-note">⏱️ 不堵车约10:30到，堵车可能11:30甚至更晚。以下行程按11:30到达计算，若早到可多逛，晚到则压缩下午线路</div>
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot f"></div>
+        <div class="tltime">11:30 — 12:30</div>
+        <div class="tltitle">🍽️ 沟口午餐 · 整理装备</div>
+        <div class="tldesc">
+          沟口吃午饭（景区内食物贵且选择少），<b>推荐餐厅：</b>
+          <ul>
+            <li><b>私享旅行酒店旁 · 网红西红柿汤锅</b> — 藏王广场肯德基隔壁，就在行李寄存点旁边，方便！汤锅暖身驱寒，人均40-60元</li>
+            <li><b>沟口藏式餐馆</b> — 推荐藏式炒饭/牦牛肉面，人均30-50元，出沟口走几步就有多家</li>
+            <li><b>九寨沟口快餐小吃</b> — 沟口售票处附近有小吃街，抄手/米粉/烤串，人均20-30元，快速解决</li>
+          </ul>
+          吃完到荷叶寨民宿入住（行李已转运），穿好冲锋衣防雨装备，轻装进沟
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">13:00 — 13:40</div>
+        <div class="tltitle">🚌 入园 · 乘车直达Y字左支顶端</div>
+        <div class="tldesc">
+          乘观光车直接坐到<b>长海站</b>（Y字左支最高点，车程约40分钟）<br>
+          💡 下午时段观光车可到左支（则查洼沟），上午统一送右支，所以左支必须下午走
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">13:40 — 15:10 <span class="bdg bdg-amber">左支游览约1.5h（宽松）</span></div>
+        <div class="tltitle">🌊 【Y字左支·则查洼沟】长海 → 五彩池 → 诺日朗</div>
+        <div class="tldesc">
+          <ul>
+            <li><b>长海</b> <span class="spot spot-go">🚶下车20-30min</span><br>九寨沟最大最深的湖泊，视野辽阔。站在观景台上拍全景，雨天云雾缭绕别有气势。<br><i>下车理由：左支唯一值得深度停留的大海子，拍全景2-3张即可，不必走太深</i></li>
+            <li>步行下山约1km → <b>五彩池</b> <span class="spot spot-go">🚶下车20-30min</span><br>九寨沟最小但色彩最浓郁的海子，蓝绿色调变化神奇，必看经典！<br><i>下车理由：九寨沟色彩之最，不下车等于白来左支。拍几张近景特写很出片</i></li>
+          </ul>
+          <div class="plan-note">⏱️ 左支只有长海和五彩池两个主要景点，轻松不赶。约14:30回到五彩池站乘车</div>
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">15:10 — 16:00</div>
+        <div class="tltitle">💦 诺日朗瀑布 <span class="spot spot-go">🚶下车15-20min</span> + 车至盆景滩</div>
+        <div class="tldesc">
+          从五彩池站乘车 → <b>诺日朗中心站</b>（约15分钟）→ 下车步行至诺日朗瀑布观景台<br>
+          <b>诺日朗瀑布</b>：中国最宽钙华瀑布（宽300m），非常壮观。下车到观景台拍几张就走，不需要走全程栈道<br><br>
+          <b>🍓 重点：看完诺日朗后，在诺日朗中心站上观光车 → 盆景滩下车</b>（这段中心线今天必须走！明天12点前这段无车有风险）<br>
+          <b>盆景滩</b> <span class="spot spot-go">🚶下车10-15min</span> — 钙化浅滩如天然盆景，小巧精致，下车拍几张即走
+          <div class="plan-note">⏱️ 诺日朗15min + 乘车到盆景滩15min + 盆景滩15min ≈ 16:00结束</div>
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">16:00 — 16:30</div>
+        <div class="tltitle">🚌 盆景滩 → 荷叶寨（乘车）</div>
+        <div class="tldesc">
+          从盆景滩乘车回荷叶寨民宿（车程约10分钟），或步行回（约40分钟，下行轻松但雨天路滑看体力）<br>
+          💡 建议<b>乘车回民宿</b>，今天第一天留足体力给明天右支精华段
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot s"></div>
+        <div class="tltime">16:30 — 18:00</div>
+        <div class="tltitle">🏡 返回民宿 · 休息暖和</div>
+        <div class="tldesc">
+          回民宿洗漱换衣暖和一下，在房间/公共区休息<br>
+          💡 荷叶寨位于<b>沟内</b>，明天一早可乘首班车冲右支，优势巨大
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot f"></div>
+        <div class="tltime">18:30 — 20:00</div>
+        <div class="tltitle">🥘 晚餐：寨里牦牛火锅或民宿饭</div>
+        <div class="tldesc">
+          <b>推荐餐厅：</b>
+          <ul>
+            <li><b>荷叶寨内民宿餐厅</b> — 住沟内最方便的选择，不用走远。大部分荷叶寨民宿提供藏式晚餐，人均50-80元，牦牛肉汤锅/酥油茶/青稞饼</li>
+            <li><b>塞里·珠穆朗玛藏餐厅</b> — 树正寨附近，藏族风味正宗，牦牛肉火锅一绝，人均80-120元（需提前问民宿老板怎么走）</li>
+            <li><b>树正寨藏式小店</b> — 沟内几个寨子都有小餐馆，价格略贵但胜在方便，藏面/炒饭人均30-50元</li>
+          </ul>
+          💡 高原寒夜吃火锅是最幸福的记忆，点一锅牦牛肉片+藏香猪+野菜
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot s"></div>
+        <div class="tltime">20:30</div>
+        <div class="tltitle">🛏️ 早睡！明天早起冲右支</div>
+        <div class="tldesc">明天是九寨沟主力日，住沟内早起后民宿带到荷叶寨门口搭车。<b>右支是精华中的精华，上午光线也是最好的时段！</b></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== DAY 3 ===== -->
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-badge">Day 3</div>
+    <div>
+      <div class="day-title">🌈 九寨沟全天深度游 · 右支精华+中心线 · 傍晚大巴返成都</div>
+      <div class="day-subtitle">5月1日（周四）· 上午Y字右支精华+下午中心线补漏，17:30前取行李赶大巴</div>
+    </div>
+    <div class="wpill rainy">🌧️ 21/9℃ 持续降雨 最冷一天</div>
+  </div>
+  <div class="day-body">
+
+    <div class="alert alert-warn" style="margin-bottom:14px">
+      <div class="aicon">🥶</div>
+      <div class="acontent">
+        <h3>全程最冷最湿的一天（最低9℃）+ 硬性时间约束</h3>
+        <p>冲锋衣/羽绒服+保暖内胆+防滑鞋全副武装。高海拔长时间在雨中体感更低，<b>备暖宝宝贴+葡萄糖/能量棒</b>。</p>
+        <p><b>⏰ 硬性时间约束（倒推安排，每步留足缓冲）：</b></p>
+        <ul>
+          <li><b>17:30</b> 藏王宴末班大巴 → 松潘 → 成都东（不能误！）</li>
+          <li><b>16:30</b> 必须到寄存处取好行李（彭丰村私享旅行酒店，约需30min从景点返回）</li>
+          <li><b>16:00</b> 必须结束所有游览，开始往回赶</li>
+          <li><b>12:00后</b> 才能走中心线（诺日朗→犀牛海→盆景滩），否则有检票风险</li>
+        </ul>
+        <p><b>→ 右支游览窗口 = 8:00–12:00（4小时，充足！）</b><br>
+        → 午餐 12:00–13:00 → 中心线 13:00–16:00（3小时，非常宽松）</p>
+      </div>
+    </div>
+
+    <div class="legend">
+      <span class="spot spot-go">🚶 下车深度游</span>
+      <span class="spot spot-car">🚌 车上观览</span>
+      <span class="spot spot-skip">⏭️ 可跳过</span>
+    </div>
+
+    <div class="tl">
+      <div class="tli">
+        <div class="tldot f"></div>
+        <div class="tltime">07:00 — 07:40</div>
+        <div class="tltitle">🍳 民宿早餐 · 穿好装备 · 退房</div>
+        <div class="tldesc">
+          住沟内最大优势：不需要赶早班车！慢悠悠吃完早餐，穿好冲锋衣+防滑鞋，带好雨伞和干粮<br>
+          <b>⚠️ 早上退房！</b>民宿将行李送至沟口寄存处（彭丰村「私享旅行酒店」），下午返程去取<br>
+          <b>民宿带我们到荷叶寨门口搭车</b>（民宿一般可协助安排）
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot t"></div>
+        <div class="tltime">07:40 — 08:20</div>
+        <div class="tltitle">🚌 乘观光车 → 直达原始森林站</div>
+        <div class="tldesc">
+          乘观光车直达<b>原始森林站</b>（Y字右支最顶端，车程约40分钟）<br>
+          💡 <b>上午观光车统一送右支（日则沟）</b>，这是景区规则，正好匹配计划<br>
+          <b>为什么先走右支？</b> → 右支景点最多最精华（五花海+珍珠滩+镜海），上午光线也是九寨沟最美的时段
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">08:20 — 09:20 <span class="bdg bdg-amber">约60min</span></div>
+        <div class="tltitle">🌲 原始森林 → 芳草海→天鹅海 3km <span class="bdg bdg-pink">体力挑战段</span></div>
+        <div class="tldesc">
+          <ul>
+            <li><b>原始森林</b> <span class="spot spot-skip">⏭️可跳过</span> — 高密度原始林，栈道幽深。时间紧可略过（和其他森林类似），直接在栈道口拍两张就走</li>
+            <li><b>芳草海→天鹅海 步行3km</b> <span class="spot spot-go">🚶有体力才走</span><br>
+              <i style="color:#be185d">🍓 重点推荐！</i>这段和其他景点完全不同——没有栈道栏杆，走在草甸湿地旁，天鹅海有野生天鹅，人少安静，雨天尤其仙。<b>⚠️但步行3km+全无遮挡，雨天泥泞，妈妈们量力而行。</b></li>
+          </ul>
+          <div class="plan-note">💡 体力分配：若妈妈们不想走3km，在原始森林站上车，直接到箭竹海站下车开始精华段。这样节省1h，右支更宽松</div>
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">09:20 — 10:00 <span class="bdg bdg-amber">40min</span></div>
+        <div class="tltitle">🎋 箭竹海 → 熊猫海</div>
+        <div class="tldesc">
+          <ul>
+            <li><b>箭竹海</b> <span class="spot spot-go">🚶下车15-20min</span> — 箭竹林环湖，张艺谋《英雄》取景地，拍照极出片</li>
+            <li><b>熊猫海</b> <span class="spot spot-go">🚶下车15-20min</span> — 湖水碧蓝，传说熊猫来此饮水（虽然看不到熊猫😂），但水色确实绝美</li>
+            <li><b>熊猫海瀑布</b> <span class="spot spot-car">🚌路过观赏</span> — 瀑布落差不大，路过拍两张即可</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">10:00 — 11:00 <span class="bdg bdg-pink">⭐⭐⭐ 今日必看TOP1</span></div>
+        <div class="tltitle">💎 五花海 <span class="spot spot-go">🚶下车40-50min</span></div>
+        <div class="tldesc">
+          <b>九寨沟的镇沟之宝！</b>五种颜色分层交融，被称为"九寨精华"。<br><br>
+          <b>为什么必须深度停留：</b>
+          <ul>
+            <li>上午10:00-11:00是五花海<b>光线最好的时段</b>，阳光斜射湖水色彩层次最丰富</li>
+            <li>雨后五花海的颜色反而更浓郁（水汽+矿物质折射），简直是仙境</li>
+            <li>建议沿湖边栈道走一圈（约800m），每个角度颜色都不一样</li>
+            <li>这里是全行程最值得多花时间的景点，<b>不要着急走</b></li>
+          </ul>
+          <div class="plan-note">📸 拍照Tips：站在栈道中段偏左位置，可以看到湖底枯树枝+蓝绿色水面，最经典角度</div>
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">11:00 — 11:40 <span class="bdg bdg-pink">⭐⭐ 今日必看TOP2</span></div>
+        <div class="tltitle">💧 珍珠滩瀑布 <span class="spot spot-go">🚶下车30min</span></div>
+        <div class="tldesc">
+          <b>西游记片尾曲取景地！</b>宽阔的钙华滩上水流如万颗珍珠滚落，非常壮观。<br>
+          沿栈道走到瀑布正面和侧面各拍几张，声音轰鸣很震撼
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">11:40 — 12:00</div>
+        <div class="tltitle">🪞 镜海 → 乘车回诺日朗</div>
+        <div class="tldesc">
+          <ul>
+            <li><b>镜海</b> <span class="spot spot-car">🚌车上观览</span> — 无风时水面如镜，倒影完美。但雨天有雨纹，镜面效果打折。车上远观即可，不专门下车</li>
+            <li>从镜海站乘车 → <b>诺日朗中心站</b>（约15分钟车程）</li>
+          </ul>
+          <div class="plan-note">⏱️ 12:00回到诺日朗，正好吃午饭！时间节奏舒适</div>
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot f"></div>
+        <div class="tltime">12:00 — 13:00</div>
+        <div class="tltitle">🍱 诺日朗中心午餐</div>
+        <div class="tldesc">
+          景区内唯一大型餐厅，人均60-100元，选择有限但能吃饱<br>
+          <b>推荐选择：</b>
+          <ul>
+            <li><b>诺日朗餐厅（景区内）</b> — 唯一选择，自助餐/盒饭，人均60-100元。不必期待太高，能吃饱就行</li>
+            <li><b>自备干粮（推荐！）</b> — 自热米饭/面包+巧克力+坚果+牛肉干，节省排队时间，还能在景点边吃边看</li>
+          </ul>
+          💡 强烈建议自带干粮作为补充，景区餐厅排队可能30分钟+
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">13:00 — 15:30 <span class="bdg bdg-amber">中心线 2.5h（宽松）</span></div>
+        <div class="tltitle">🌿 【中心线·12点后安全段】诺日朗瀑布 → 犀牛海 → 盆景滩</div>
+        <div class="tldesc">
+          <div class="alert alert-tip" style="margin-bottom:10px;padding:8px 12px">
+            <b>🍓 重要：下午12点后走中心线是安全的！</b>上午这段只有去右支的车，12点后双向通车正常。<br>
+            <b>昨日已完成"诺日朗→盆景滩"段</b>，今天下午重点走<b>犀牛海</b>（昨天没下车的）
+          </div>
+          从诺日朗乘车/步行下中心线，补昨天没走过的"下行"段：<br><br>
+          <ul>
+            <li><b>诺日朗瀑布</b> <span class="spot spot-skip">⏭️昨天看过可跳过</span> — 昨天已下车拍过，跳过节省时间</li>
+            <li><b>犀牛海</b> <span class="spot spot-go">🚶下车20-30min</span> — <b>九寨沟第二大湖泊，倒影绝美！</b>昨天车览没下车，今天必须停。沿栈道走到湖边拍照，雨天倒影也很好看</li>
+            <li><b>老虎海</b> <span class="spot spot-car">🚌车上观览</span> — 与犀牛海相连，景色类似但稍小，车上掠过即可</li>
+            <li><b>树正群海</b> <span class="spot spot-go">🚶下车15-20min</span> — 19个海子阶梯分布+藏寨倒影，树正沟精华。若昨天已看过可快走或跳过</li>
+            <li><b>火花海</b> <span class="spot spot-car">🚌车上观览</span> — 火花海已修复，车上远观即可</li>
+            <li><b>树正瀑布</b> <span class="spot spot-car">🚌路过观赏</span> — 水帘式瀑布，路过随手拍</li>
+            <li><b>盆景滩</b> <span class="spot spot-skip">⏭️昨天看过可跳过</span> — 昨天已下车拍过</li>
+          </ul>
+          <div class="plan-note">
+            💡 <b>时间分配策略（非常宽松）：</b><br>
+            • 今天中心线只需重点看<b>犀牛海（20-30min）</b>，其他昨天都看过可车览<br>
+            • 13:00出发 → 乘车到犀牛海（10min）→ 犀牛海拍照（20min）→ 乘车到树正群海（10min）→ 快速拍照（10min）→ 乘车回沟口（15min）<br>
+            • 约14:00-14:30即可完成，剩余1.5h可以在诺日朗/树正寨休息喝茶<br>
+            • <b>最晚16:00必须结束所有游览</b>，开始往寄存处赶
+          </div>
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">15:00 — 16:00</div>
+        <div class="tltitle">☕ 树正寨/诺日朗休息 <span class="bdg bdg-green">缓冲时间</span></div>
+        <div class="tldesc">
+          提前完成游览后，可以在树正寨或诺日朗中心休息：
+          <ul>
+            <li>在诺日朗中心喝杯热饮暖和一下</li>
+            <li>或到树正寨小卖部买点纪念品</li>
+            <li>妈妈们可以坐着歇脚，等16:00再慢慢出沟</li>
+          </ul>
+          💡 <b>预留充足缓冲</b>，宁可早结束休息，不要赶时间
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot s"></div>
+        <div class="tltime">16:00 — 16:30 <span class="bdg bdg-red">❗绝不能延误</span></div>
+        <div class="tltitle">🚌 乘观光车/步行 → 出沟口</div>
+        <div class="tldesc">
+          从游览点乘观光车 → 沟口出站（约20分钟）<br>
+          或步行至最近的乘车点等车
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot t"></div>
+        <div class="tltime">16:30 — 17:00</div>
+        <div class="tltitle">🧳 沟口 → 取行李（私享旅行酒店）</div>
+        <div class="tldesc">
+          ⚠️ <b>16:30-17:00必须取好行李！</b><br>
+          行李寄存处：<b>彭丰村「私享旅行酒店」</b>（藏王广场肯德基隔壁）<br>
+          从沟口步行10-20分钟可到。拿好行李后，立即前往<b>藏王宴停车场</b>候车<br>
+          💡 建议提前和民宿确认行李寄存处的准确位置和取件方式
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot t"></div>
+        <div class="tltime">17:30 — 23:12</div>
+        <div class="tltitle">🚌 九寨沟口 → 松潘 → 成都东 <span class="bdg bdg-blue">大巴约5.5h</span></div>
+        <div class="tldesc">
+          <b>17:30 或 18:00末班大巴</b> → 松潘 → 成都东<br>
+          路线：大巴→松潘→21:37松潘乘高铁→23:12成都东<br>
+          <b>或</b>：大巴直达成都龙泉区（约4-5h，约22:30-23:00到）<br>
+          💡 路上备零食+颈枕，妈妈们可小睡恢复体力<br>
+          🚫 <b>绝不能错过末班车！</b>错过就只能在九寨沟多住一晚+改签
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot s"></div>
+        <div class="tltime">23:00 — 23:30</div>
+        <div class="tltitle">😴 抵达成都 · 入住酒店</div>
+        <div class="tldesc">
+          抵达成都龙泉经开区汽车城汉庭酒店（或成都东站附近酒店）<br>
+          洗澡睡觉，今天走路量大（右支精华段6-8km），好好休息
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;padding:12px 16px;background:#fef3c7;border-radius:10px;font-size:.82rem">
+      <b>📊 今日景点优先级总结（若时间紧张按此取舍）：</b><br>
+      <span class="spot spot-go">🚶必须下车</span> 五花海（50min）> 珍珠滩瀑布（30min）> 犀牛海（20-30min）> 五彩池（30min）> 箭竹海（20min）> 熊猫海（20min）<br>
+      <span class="spot spot-go">🚶推荐下车</span> 芳草海→天鹅海（体力OK才走）> 长海（20min）> 诺日朗瀑布（15min）> 树正群海（15min）<br>
+      <span class="spot spot-car">🚌车上观览即可</span> 镜海 > 芦苇海 > 火花海 > 老虎海 > 熊猫海瀑布 > 盆景滩（昨天看过）
+    </div>
+  </div>
+</div>
+
+<!-- ===== DAY 4 ===== -->
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-badge">Day 4</div>
+    <div>
+      <div class="day-title">🍜 成都→乐山 · 吃吃吃的一天</div>
+      <div class="day-subtitle">5月2日（周五）· 高铁抵乐山，逛吃美食街，节奏轻松</div>
+    </div>
+    <div class="wpill ok">🌥️ 乐山26/17℃ 阴天（较宜游）</div>
+  </div>
+  <div class="day-body">
+    <div class="alert alert-info" style="margin-bottom:14px">
+      <div class="aicon">😊</div>
+      <div class="acontent">
+        <h3>今日是全程最轻松的一天，专心吃美食！</h3>
+        <p>经过两天九寨沟高强度游览，今天以吃喝休息为主。乐山天气转好（阴天不下雨），适合街头漫步。晚上住在嘉兴路美食街步行区域，下楼即是宝藏美食。</p>
+      </div>
+    </div>
+    <div class="tl">
+      <div class="tli">
+        <div class="tldot f"></div>
+        <div class="tltime">08:00 — 09:00</div>
+        <div class="tltitle">🍳 成都早餐</div>
+        <div class="tldesc">
+          酒店周边找成都早餐：<b>蛋烘糕 / 锅盔 / 豆花饭</b>，人均10-20元<br>
+          💡 成都东站/龙泉区有大量本地早餐铺，不必专程打车去网红地
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot t"></div>
+        <div class="tltime">09:30 — 10:25</div>
+        <div class="tltitle">🚄 成都东→乐山高铁 <span class="bdg bdg-blue">约30分钟</span></div>
+        <div class="tldesc">
+          成都东 10:25 → 乐山 11:18（行程原定班次）<br>
+          备选车次多，基本30分钟/班，二等座约￥32，可临时购票<br>
+          💡 乐山站（西广场进站）→ 打车/公交至嘉兴路美食街约15分钟
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot s"></div>
+        <div class="tltime">11:30 — 12:30</div>
+        <div class="tltitle">🏨 酒店入住 · 放行李</div>
+        <div class="tldesc">
+          入住怡莱乐山嘉兴路美食街酒店，放行李，换舒适便鞋<br>
+          下楼即是美食街，极度方便
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot f"></div>
+        <div class="tltime">12:30 — 14:00</div>
+        <div class="tltitle">🥘 午餐：乐山必吃之跷脚牛肉</div>
+        <div class="tldesc">
+          <b>推荐餐厅：</b>
+          <ul>
+            <li><b>冯三嬢跷脚牛肉（嘉定南路总店）</b> — 乐山跷脚牛肉标杆之一，牛骨老汤慢熬，清汤/麻辣可选。必点：跷脚牛肉+粉蒸肥肠+血旺，人均40-60元。本地人排队的店</li>
+            <li><b>古真记钵钵鸡（东大街）</b> — 乐山钵钵鸡代表，红油藤椒两种口味，人均30-50元。环境一般但味道正宗，先买号再逛街</li>
+            <li><b>游氏老嘉州跷脚牛肉</b> — 老字号，汤底鲜醇不辣，适合不太能吃辣的长辈，人均35-50元。蒸牛肉和火爆双脆也是招牌</li>
+          </ul>
+          ⚠️ 12:30-13:30午高峰可能等位，<b>可先叫号再逛街</b>
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">14:00 — 17:00</div>
+        <div class="tltitle">🏛️ 下午：乐山古城漫步</div>
+        <div class="tldesc">
+          <b>推荐动线（轻松散步约3km）：</b>
+          <ul>
+            <li>嘉定坊（乐山老街区，文创小铺、本地小吃聚集）</li>
+            <li>茫溪河边步道（江景散步，比景区轻松）</li>
+            <li>大佛寺片区外围走走（明天正式入园，今天先感受氛围）</li>
+          </ul>
+          💡 节奏提示：妈妈们若累了可回酒店休息，两位年轻人继续逛也完全可以
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot f"></div>
+        <div class="tltime">18:00 — 20:00</div>
+        <div class="tltitle">🍽️ 晚餐：乐山美食大扫荡</div>
+        <div class="tldesc">
+          <b>推荐餐厅/美食街：</b>
+          <ul>
+            <li><b>张公桥美食街</b>（晚上最热闹）— 一条街全是吃的！<b>推荐：</b>
+              <ul>
+                <li>🦆 <b>赵鸭子/王浩儿甜皮鸭</b>（张公桥都有店）— 乐山独有，外皮甜香！买半只当主食+零食，人均25-35元/半只</li>
+                <li>🐟 <b>嘉州烤鱼</b>（张公桥店）— 豆花鱼/泡椒口味，乐山特色烤鱼，人均60-80元</li>
+                <li>🍬 <b>翘脚鳝丝</b>（张公桥店）— 乐山独有，鳝丝炒得鲜嫩入味，人均40-50元</li>
+              </ul>
+            </li>
+            <li><b>嘉兴路美食街</b>（就在酒店楼下！）— 不用打车，下楼就有：
+              <ul>
+                <li>🍢 <b>钵钵鸡</b>：冷吃版，签签串串蘸麻酱，一人吃20签起步</li>
+                <li>🥟 <b>叶儿粑/豆腐脑</b>：各种乐山小吃一网打尽</li>
+              </ul>
+            </li>
+          </ul>
+          💡 今晚放开吃，人均50-80元能吃到撑！
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot s"></div>
+        <div class="tltime">20:30 返回酒店</div>
+        <div class="tltitle">🛏️ 早睡 · 明天7:30大佛景区开门</div>
+        <div class="tldesc">明天游乐山大佛须早起，强烈建议7:30开园第一批进入，否则九曲栈道排队可达2-3小时</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== DAY 5 ===== -->
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-badge">Day 5</div>
+    <div>
+      <div class="day-title">🗿 乐山大佛 · A游船/B对岸观佛 · 傍晚高铁回成都</div>
+      <div class="day-subtitle">5月3日（周六）· 上午乐山大佛景区，下午悠闲逛吃，<b>17:53高铁回成都南</b></div>
+    </div>
+    <div class="wpill rainy">🌦️ 25/19℃ 雨转阴 备雨具</div>
+  </div>
+  <div class="day-body">
+
+    <div class="alert alert-tip" style="margin-bottom:14px">
+      <div class="aicon">🚂</div>
+      <div class="acontent">
+        <h3>今日高铁时间：<b>17:53乐山 → 18:25成都南</b></h3>
+        <p>下午时间充裕！不像之前安排的13:00就回，现在有<b>整整一天</b>在乐山。<br>
+        时间线：上午游乐山大佛 → 午餐 → 下午悠闲Citywalk/逛吃 → 17:00前到乐山站 → 17:53发车<br>
+        💡 建议提前买好17:53这趟高铁票，五一车次紧俏！</p>
+      </div>
+    </div>
+
+    <div class="alert alert-tip" style="margin-bottom:14px">
+      <div class="aicon">🚢</div>
+      <div class="acontent">
+        <h3>游船票务必提前抢！五一抢票难度极高</h3>
+        <p>乐山大佛游船票五一属于<b>旺季中的旺季</b>，官方提前7-15天放票，<b>建议提前10天以上</b>在「大佛旅游」小程序抢票。<br>
+        • 游船票分时段预约（如8:30/9:30/10:30），抢不到就只能选B方案<br>
+        • 现场排队买票几乎不可能买到<br>
+        • <b>建议：出发前同时做A/B两手准备</b>，抢到船票走A，抢不到走B（B也很好！）</p>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tli">
+        <div class="tldot f"></div>
+        <div class="tltime">07:00 — 07:30</div>
+        <div class="tltitle">☕ 乐山早餐</div>
+        <div class="tldesc">
+          <b>豆腐脑</b>（乐山咸辣版，和成都完全不同！）+ 蛋烘糕，人均5-15元<br>
+          <b>推荐餐厅：</b>
+          <ul>
+            <li><b>高师傅豆腐脑（嘉兴路店）</b> — 就在酒店附近！乐山豆腐脑标杆，牛肉豆腐脑/粉蒸牛肉豆腐脑都好吃，人均12-18元，7:00就开门</li>
+            <li><b>九九豆腐脑（总店）</b> — 乐山老字号，加粉条的吃法是特色，人均15-20元</li>
+            <li><b>四方豆腐脑</b> — 本地人也爱去的店，甜咸两种口味都有，人均10-15元</li>
+          </ul>
+          💡 豆腐脑+蛋烘糕是乐山早餐标配，酒店周边就有，以快速出发为主
+        </div>
+      </div>
+
+      <!-- ===== A方案 ===== -->
+      <div class="tli" style="background:linear-gradient(135deg,#fef3c7,#fef9c3);border-radius:12px;padding:14px;margin:0 -22px 16px -22px;padding-left:26px">
+        <div class="tltime" style="color:#92400e;font-weight:700">🅰️ A方案 · 抢到游船票走这条</div>
+        <div class="tltitle" style="color:#92400e">🚢 乘船观大佛全景（推荐体验！）</div>
+        <div class="tldesc">
+          <b>游船优势：</b>坐在船上近距离仰视大佛全貌（71米高！），还能看到隐形的"巨型睡佛"轮廓。<b>无需排队下九曲栈道</b>，对妈妈们特别友好。全程30-40分钟，佛前水域停留5-10分钟供拍照。<br><br>
+          <b>推荐时段：上午8:30-11:00</b>（光线好、不逆光、气温舒适）
+          <ol>
+            <li><b>07:30 出发</b> → 打车到<b>乌尤寺码头</b>（导航搜"乐山大佛乌尤寺码头"，约15分钟）<br>
+              💡 也可选<b>嘉州渡码头</b>（大佛左侧），航线顺时针绕大佛一圈，风景和时长更好</li>
+            <li><b>08:00-08:30 到达码头排队登船</b><br>
+              ⚠️ 五一排队可能30-60分钟，建议按船票预约时段提前30分钟到</li>
+            <li><b>08:30/09:30（按票面时间）</b> 游船出发！<br>
+              坐在船的<b>右侧</b>（面向大佛方向），拍照角度最佳<br>
+              船到大佛正面时会减速停留几分钟，抓紧拍大佛全貌+睡佛</li>
+            <li><b>09:00/10:00 下船</b> → 步行上凌云寺祈福（10-15分钟）</li>
+            <li><b>09:30/10:30</b> 佛头平台拍照 → 北门出景区</li>
+          </ol>
+          <div class="plan-note">⏱️ A方案全程约2.5小时（含排队），11:00前即可结束，剩余一整个下午逛吃！</div>
+        </div>
+      </div>
+
+      <!-- ===== B方案 ===== -->
+      <div class="tli" style="background:linear-gradient(135deg,#ede9fe,#f3e8ff);border-radius:12px;padding:14px;margin:0 -22px 16px -22px;padding-left:26px">
+        <div class="tltime" style="color:#5b21b6;font-weight:700">🅱️ B方案 · 没抢到船票走这条</div>
+        <div class="tltitle" style="color:#5b21b6">👁️ 对岸免费观大佛全景 + 乐山市内游走</div>
+        <div class="tldesc">
+          <b>B方案同样精彩！</b>进景区反而看不到大佛全貌（太大了一座山），对面看全景才是最佳视角。<br><br>
+          <b>🕐 时间线：</b>
+          <ol>
+            <li><b>07:30 出发</b> → 打车导航"<b>太阳岛看乐山大佛全景</b>"<br>
+              📍 <b>怎么去：</b>从乐山市区走大渡河大桥→乐山高新区→小桥上岛。直接告诉滴滴师傅"去太阳岛看大佛"即可。<br>
+              💡 <b>备选路线：</b>从老城区滨河路"<b>铁牛门码头</b>"坐渡船过去，船票约2元，几分钟就到（雨天可能停航）</li>
+            <li><b>08:00 — 09:30 太阳岛观大佛全景</b> <span class="bdg bdg-green">免费！</span><br>
+              <i style="color:#5b21b6">📍 最佳观佛位置：</i>太阳岛（凤洲岛/大佛坝）位于大佛正对面，隔岷江相望<br>
+              <b>导航设置：</b>高德地图搜"太阳岛"或"凤洲岛"或"大佛坝"<br>
+              <b>最佳观赏点：</b>上岛后沿江边步行到面向大佛的开阔地带，大佛+凌云山全貌一览无余<br>
+              📸 拍照Tips：8:00-9:00光线从东面照大佛，拍照最佳。带望远镜/长焦镜头效果更好<br>
+              ⚠️ 岛上无遮挡，雨天带伞。自由活动，不受景区排队限制</li>
+            <li><b>09:30 — 10:00 打车返回市区</b></li>
+            <li><b>10:00 — 12:30 市内深度游（约2.5小时）</b><br>
+              <ul>
+                <li>🏛️ <b>乐山文庙/老霄顶公园</b>（免费）— 城区制高点，向东可俯瞰大佛头部至胸部，兼顾凌云山地貌。约1h</li>
+                <li>🛕 <b>乌尤寺</b>（门票约¥8）— 大佛景区旁的千年古寺，比凌云寺清幽很多，游客极少。约40min</li>
+                <li>🌊 <b>乐山港滨江绿道</b>（免费）— 沿岷江西岸步行约500m，多个观景平台。约30min</li>
+              </ul>
+              💡 这些点都在乐山城区，步行+打车可串联，无需进大佛景区（省门票¥80）</li>
+          </ol>
+          <div class="plan-note">⏱️ B方案12:30前结束，下午同样有充足时间逛吃。无需排队焦虑，更适合雨天！</div>
+        </div>
+      </div>
+
+      <!-- A/B方案汇合后 -->
+      <div class="tli">
+        <div class="tldot f"></div>
+        <div class="tltime">12:30 — 14:00</div>
+        <div class="tltitle">🍜 午餐：乐山大餐时间</div>
+        <div class="tldesc">
+          A/B方案汇合点，一起吃午饭。乐山美食是重头戏！<br>
+          <b>推荐餐厅：</b>
+          <ul>
+            <li><b>海汇源老烧麦（东大街店）</b> — 百年老字号！乐山烧麦和别处完全不同，皮薄馅大加红油。配一碗粉蒸牛肉或甜水面，人均30-50元。很多本地人从小吃到大的店</li>
+            <li><b>冯三嬢跷脚牛肉（嘉定南路总店）</b> — 乐山跷脚牛肉标杆之一，牛骨老汤熬制，清汤/麻辣可选，人均40-60元。必点：跷脚牛肉+粉蒸肥肠+血旺</li>
+            <li><b>游记肥肠（嘉定中路）</b> — 本地人私藏馆子，肥肠处理得干净，红烧肥肠+火爆双脆是招牌，人均40-50元，生意火爆但翻台快</li>
+          </ul>
+          💡 以上餐厅集中在乐山老城区（嘉定坊/东大街/张公桥一带），从景区打车10分钟内可达
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">14:00 — 16:30 <span class="bdg bdg-amber">下午悠闲逛吃 2.5h</span></div>
+        <div class="tltitle">🏙️ 乐山下午Citywalk + 逛吃</div>
+        <div class="tldesc">
+          下午时间充裕，慢慢逛乐山老城区：<br><br>
+          <b>推荐动线（轻松休闲）：</b>
+          <ul>
+            <li>🏘️ <b>嘉定坊古街</b>（约30min）— 仿古街区，文创小铺+本地小吃，拍照好看</li>
+            <li>🛍️ <b>上中街/东大街</b>（约40min）— 老城区核心，各种小吃扎堆：甜皮鸭、钵钵鸡、叶儿粑、冰粉、豆腐脑…边走边吃</li>
+            <li>🌊 <b>岷江边散步</b>（约30min）— 从乐山港到铁牛门沿江漫步，雨天江景也很有意境</li>
+            <li>☕ 找一家临江茶馆坐坐，点杯盖碗茶，慢慢看江景和来往船只（约30min）</li>
+          </ul>
+          <b>路上必吃小吃：</b>
+          <ul>
+            <li>🦆 <b>甜皮鸭</b>：乐山独有，外皮甜香！推荐<b>赵鸭子</b>或<b>王浩儿甜皮鸭</b>，买半只或整只打包当零食</li>
+            <li>🍢 <b>钵钵鸡</b>：冷吃版签签串串，推荐<b>叶婆婆钵钵鸡</b>（上中街），人均30-50元</li>
+            <li>🍧 <b>冰粉/凉糕</b>：乐山冰粉全国一绝，推荐<b>三鲜冰粉</b>或<b>红糖凉糕</b>，路边摊即可，人均5-10元</li>
+          </ul>
+          💡 下午节奏很松，妈妈们累了随时回酒店休息或找茶馆坐着都行
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot s"></div>
+        <div class="tltime">16:00 — 16:30</div>
+        <div class="tltitle">🏨 回酒店取行李 · 整理</div>
+        <div class="tldesc">
+          返回嘉兴路美食街酒店取行李，整理一下<br>
+          💡 预留30分钟缓冲，确保不匆忙
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot t"></div>
+        <div class="tltime">16:30 — 17:00</div>
+        <div class="tltitle">🚕 打车前往乐山站</div>
+        <div class="tldesc">
+          从嘉兴路美食街打车到乐山站约15分钟<br>
+          💡 五一期间打车可能要等5-10分钟，建议16:30就出发<br>
+          ⚠️ <b>17:53发车，最迟17:30必须进站！</b>
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot t"></div>
+        <div class="tltime">17:53 — 18:25</div>
+        <div class="tltitle">🚄 乐山 → 成都南 <span class="bdg bdg-blue">高铁32分钟</span></div>
+        <div class="tldesc">
+          车次：17:53乐山发 → 18:25成都南到达，二等座约¥54<br>
+          到站后地铁1号线 → 芳草街站 → 步行至公寓酒店
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot s"></div>
+        <div class="tltime">19:00 — 19:30</div>
+        <div class="tltitle">🏨 入住芳草街地铁站公寓酒店</div>
+        <div class="tldesc">
+          成都南站下车 → 地铁1号线（约15分钟）→ 芳草街站 → 步行至酒店<br>
+          放行李，换轻便舒适衣服
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot f"></div>
+        <div class="tltime">19:30 — 21:00</div>
+        <div class="tltitle">🌙 晚餐：成都夜宵</div>
+        <div class="tldesc">
+          回成都后的第一顿，吃点轻量级的<br>
+          <b>推荐餐厅（芳草街/玉林路周边）：</b>
+          <ul>
+            <li><b>冒椒火辣（玉林路总店）</b> — 成都最火的冷锅串串之一！冒脑花/兔腰/掌中宝必点，人均60-80元。⚠️五一排队可能1h+，建议提前取号</li>
+            <li><b>青年火锅（玉林店）</b> — 芳草街附近的本地火锅，牛油锅底正宗，人均80-100元，不坑游客</li>
+            <li><b>严太婆锅盔（总店/芳草街）</b> — 成都特色锅盔，牛肉/猪肉馅现烤，人均10-15元。排队买几个当夜宵带走吃</li>
+          </ul>
+          💡 如果今天逛乐山已经吃得很饱了，可以简单吃点锅盔/烧烤，不必太隆重
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot s"></div>
+        <div class="tltime">21:30</div>
+        <div class="tltitle">🛏️ 早睡 · 明天熊猫基地早起</div>
+        <div class="tldesc">熊猫基地必须8:00前进，明早7:00出发。今晚好好休息！</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== DAY 6 ===== -->
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-badge">Day 6</div>
+    <div>
+      <div class="day-title">🐼 成都熊猫基地 · 下午Citywalk</div>
+      <div class="day-subtitle">5月4日（周日）· 早起看熊猫，下午宽窄巷子/太古里</div>
+    </div>
+    <div class="wpill rainy">🌧️ 26/19℃ 有雨 体感舒适</div>
+  </div>
+  <div class="day-body">
+
+    <div class="alert alert-pink" style="margin-bottom:14px">
+      <div class="aicon">🐼</div>
+      <div class="acontent">
+        <h3>熊猫基地：必须8:00前到！下午熊猫全部躲起来</h3>
+        <p>熊猫上午10:00前最活跃，啃竹子、翻跟头全在这时候。10:30后基本都在睡觉，下午几乎看不到。<b>五一限流，提前3天在"成都大熊猫繁育研究基地"公众号预约，8:00开园第一批进。</b></p>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tli">
+        <div class="tldot f"></div>
+        <div class="tltime">07:00</div>
+        <div class="tltitle">🍳 快速早餐</div>
+        <div class="tldesc">酒店或周边买包子/豆浆带走，以快速出发为主</div>
+      </div>
+      <div class="tli">
+        <div class="tldot t"></div>
+        <div class="tltime">07:30 出发</div>
+        <div class="tltitle">🚕 打车/地铁前往熊猫基地</div>
+        <div class="tldesc">
+          芳草街→熊猫基地约25-35分钟打车，或地铁3号线到熊猫大道站再接驳<br>
+          💡 五一期间打车比较难叫，建议提前叫好顺风车/滴滴
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">08:00 — 11:00</div>
+        <div class="tltitle">🐼 成都大熊猫繁育研究基地（3小时）</div>
+        <div class="tldesc">
+          <b>最佳打卡路线：</b>
+          <ul>
+            <li>🌿 <b>月亮产房</b>：看最小的幼崽（熊猫宝宝！）</li>
+            <li>🌿 <b>熊猫幼儿园</b>：多只幼年熊猫一起玩耍，最可爱</li>
+            <li>🌿 <b>成年大熊猫室外场</b>：清晨最活跃，啃竹子抢着拍</li>
+            <li>🌿 <b>红熊猫</b>（小熊猫）：不逊于大熊猫，可爱程度拉满</li>
+          </ul>
+          💡 雨天反而好：游客少，熊猫不怕热，户外活动更活跃！记得带雨伞进园
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot t"></div>
+        <div class="tltime">11:00 — 12:30</div>
+        <div class="tltitle">🚕 返回市区 · 午餐</div>
+        <div class="tldesc">
+          打车返回太古里/春熙路区域（约20-30分钟）<br>
+          <b>推荐餐厅（太古里/春熙路周边）：</b>
+          <ul>
+            <li><b>马旺子·川小馆（太古里旁）</b> — 成都排队王之一！川菜做得精致好吃，回锅肉/麻婆豆腐/担担面都是招牌，人均60-80元。⚠️排队可能1h，建议11:00在美团远程取号</li>
+            <li><b>柴门饭儿（IFS/太古里）</b> — 环境好的中档川菜馆，蒜泥白肉/水煮鱼/红糖糍粑都好吃，人均70-100元。适合妈妈们坐下来慢慢吃</li>
+            <li><b>少城老面馆（宽窄巷子附近）</b> — 本地人爱去的面馆，担担面+鸡杂面+抄手，人均15-25元，快速吃饱不耽误下午行程</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">13:00 — 17:00</div>
+        <div class="tltitle">🛍️ 下午Citywalk：宽窄巷子 + 文殊院</div>
+        <div class="tldesc">
+          <b>下午Citywalk动线：</b>
+          <ul>
+            <li>🏘️ <b>宽窄巷子</b>：宽巷子（老茶馆+传统小吃）→ 窄巷子（文创+甜品）→ 井巷子（涂鸦文化墙）</li>
+            <li>🛕 <b>文殊院</b>（宽窄旁步行可达）：拜拜求签，成都最灵的寺庙之一</li>
+            <li>☕ 找一家院落茶馆坐下，喝盖碗茶打麻将（成都慢生活体验）</li>
+          </ul>
+          💡 若今日下雨，宽窄巷子的青石板雨中格外有韵味，撑伞慢逛也很好
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot f"></div>
+        <div class="tltime">18:00 — 20:30</div>
+        <div class="tltitle">🔥 最后晚餐：正宗成都火锅</div>
+        <div class="tldesc">
+          最后一顿，吃顿正式的成都牛油火锅！<br>
+          <b>推荐餐厅（芳草街/玉林路周边）：</b>
+          <ul>
+            <li><b>小龙翻大江火锅（宽窄巷子店/市区多店）</b> — 成都网红火锅天花板，装修是民国风戏院，拍照好看。牛油锅底+现切鲜毛肚是灵魂，人均120-150元。⚠️五一排队极长，务必提前取号</li>
+            <li><b>电台巷火锅（玉林店）</b> — 重庆风味牛油火锅，不太辣但很香。嫩牛肉/鸭血/毛肚必点，人均80-100元。排队相对短一些</li>
+            <li><b>蜀大侠火锅（春熙路/芳草街附近）</b> — 成都本地人气火锅品牌，花千骨（排骨）是大特色，人均100-130元。服务好，适合最后一顿正式晚餐</li>
+          </ul>
+          💡 必点：毛肚/鸭肠/肥牛/脑花/酥肉，配红油蘸料<br>
+          ⚠️ 五一期间提前排号（美团/大众点评提前叫号）
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot s"></div>
+        <div class="tltime">21:00 返回酒店</div>
+        <div class="tltitle">🛏️ 整理行李 · 明天出发返程</div>
+        <div class="tldesc">整理行李，确认机票，设好早起闹钟。这趟旅行接近尾声，回味一下每个美好瞬间~</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== DAY 7 ===== -->
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-badge">Day 7</div>
+    <div>
+      <div class="day-title">🛫 成都→返程 · 最后早餐与离别</div>
+      <div class="day-subtitle">5月5日（周一）· 当地早餐，打卡手信，天府机场飞回</div>
+    </div>
+    <div class="wpill rainy">🌦️ 27/18℃ 雨转阴</div>
+  </div>
+  <div class="day-body">
+    <div class="tl">
+      <div class="tli">
+        <div class="tldot f"></div>
+        <div class="tltime">根据航班时间灵活安排</div>
+        <div class="tltitle">🥞 最后的成都早餐</div>
+        <div class="tldesc">
+          <b>推荐餐厅（芳草街/玉林路周边）：</b>
+          <ul>
+            <li><b>严太婆锅盔（芳草街店）</b> — 成都排队锅盔，牛肉/猪肉馅现烤酥脆，人均10-15元。买几个带走吃+当手信</li>
+            <li><b>贺记蛋烘糕（多处有店）</b> — 成都蛋烘糕标杆，奶油/肉松/花生各种口味，人均5-10元</li>
+            <li><b>陆老爹猪脚面（玉林路）</b> — 本地面馆，猪脚软糯入味，人均15-20元，吃饱有力量赶飞机</li>
+          </ul>
+          或去酒店周边找一家粥粉面店，吃完慢慢消化
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot"></div>
+        <div class="tltime">出发前1-2小时</div>
+        <div class="tltitle">🛍️ 手信购买清单</div>
+        <div class="tldesc">
+          出发前在超市/机场快速扫货：
+          <ul>
+            <li>🌶️ 郫县豆瓣酱（正宗川菜必备，液体需托运）</li>
+            <li>🥜 龙门阵花生 / 五粮液软糖</li>
+            <li>🥔 成都糖油果子（现吃现做，不适合带回）</li>
+            <li>☕ 熊猫基地周边纪念品（昨天已买的话跳过）</li>
+            <li>🌶️ 老干妈/剁椒（超市价格比机场便宜一半）</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot t"></div>
+        <div class="tltime">提前3小时出发</div>
+        <div class="tltitle">🚇 地铁18号线 → 天府机场T2</div>
+        <div class="tldesc">
+          芳草街站 → 换乘至火车南站 → 18号线直达车 → 天府机场，约50-60分钟<br>
+          五一返程高峰，机场安检排队可能较长，<b>务必提前3小时到机场</b>
+        </div>
+      </div>
+      <div class="tli">
+        <div class="tldot s"></div>
+        <div class="tltime">午后 · 飞回三亚/海南</div>
+        <div class="tltitle">✈️ 天府T2 → 美兰T2 · 依依不舍地回家</div>
+        <div class="tldesc">行程备注：天府机场午后出发飞回，带着满满的照片和肚子里的火锅返程~</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 可复制版本 ===== -->
+<div class="sdiv">📋 可复制的纯文字版本</div>
+
+<div class="copy-wrap">
+  <h4>📋 五一川西四女行 · 每日出行清单（可直接复制）</h4>
+  <button class="copy-btn" onclick="copyText()">📋 一键复制</button>
+  <div id="copytext">
+【五一川西出游攻略 · 4女行（2位30岁+2位妈妈）】
+行程：4月29日-5月5日 | 成都→九寨沟→乐山→成都
+
+═══════════════════════════════
+☁️ 天气总览（建议出发前重新查询最新预报）
+• 4/29 成都：约28/16℃，多云，宜游
+• 4/30 九寨沟：23/11℃，雨转阴 ⚠️必带雨具
+• 5/1 九寨沟：21/9℃，持续降雨，最冷一天❄️
+• 5/2 九寨沟→乐山：分别22℃/26℃，九有雨·乐阴
+• 5/3 乐山：25/19℃，雨转阴，备雨具
+• 5/4 成都：26/19℃，有雨，体感舒适
+• 5/5 成都/返程：27/18℃，雨转阴
+
+═══════════════════════════════
+🎫 出发前必须完成的预约
+①九寨沟门票：微信公众号"九寨沟"/"阿坝旅游网"，约¥190/人，提前3-5天
+②乐山大佛：公众号"乐山大佛景区"，约¥80/人，五一限流
+③成都熊猫基地：公众号"成都大熊猫繁育研究基地"，约¥55/人，提前3天
+④高铁：成都东→黄龙九寨 C5782 06:45发(08:24到)，二等座¥143，尽早抢
+
+═══════════════════════════════
+🧳 必备装备清单
+□ 防水冲锋衣/羽绒服（九寨沟最低9℃）
+□ 折叠雨伞 × 4（全程多雨）
+□ 防滑运动鞋（木栈道+九曲栈道湿滑）
+□ 保暖内胆/抓绒衣
+□ 暖宝宝贴（高原寒夜备用）
+□ 防晒霜+唇膏（高海拔紫外线强）
+□ 葡萄糖/能量棒（高原低氧用）
+□ 景区门票手机截图/手机存好行程确认单
+□ 自热米饭/零食（九寨沟内食品贵且少）
+
+═══════════════════════════════
+Day1 · 4月29日（周二）成都到达日
+---------------------------------
+✈️ 09:00 美兰T2→天府机场T2抵达
+🚇 地铁18号线直达车 → 火车南站(33min) → 换乘成都东酒店
+🏨 11:20 酒店入住，大件行李留成都，只打包去九寨沟的东西
+🍜 13:00 午餐（推荐）：
+   ①钟水饺（总店·提督街，人均25-40元，红油钟水饺+甜水面是标配）
+   ②龙抄手（春熙路店，人均30-50元，红汤/清汤/海味三种口味）
+   ③陈麻婆豆腐（旗舰店·青华路，人均50-70元，麻婆豆腐发源地）
+🚶 14:30 下午Citywalk：大慈寺→太古里→锦江河边散步
+   （如体力可，打车至宽窄巷子感受老成都）
+🔥 19:00 晚餐：牛油火锅/串串香（推荐）：
+   ①蜀九香火锅（春熙路/东站附近，人均100-130元。⚠️提前1h美团取号）
+   ②钢管厂五区小郡肝串串香（人均50-70元能吃很爽）
+   ③飘香火锅/渝味晓宇火锅（东站附近，人均80-100元，不用排太久）
+🛏️ 21:00 ❗️早睡！明天5:45出门坐6:45高铁
+📦 提前打包好：冲锋衣、防水鞋、换洗衣物、雨伞
+
+Day2 · 4月30日（周三）九寨沟·Y字左支+盆景滩回民宿
+---------------------------------
+⏰ 天气：23/11℃，雨转阴，冲锋衣+防滑鞋必穿
+🍓 策略：只走Y字左支（则查洼沟），轻松线。走完"诺日朗→盆景滩"这段中心线（明天12点前不能走！）
+🚆 05:45 出门 → 06:45 成都东C5782发车 → 08:24 黄龙九寨站
+🚌 08:30 藏王宴停车场接驳大巴 → 预留1.5-3h堵车缓冲（五一盘山路可能堵）
+   正常10:30到，堵车可能11:30+。以下按11:30计算
+📦 行李寄存：到达后寄存至彭丰村「私享旅行酒店」（藏王广场肯德基隔壁，网红西红柿汤锅隔壁）
+   脚程10-20分钟。民宿统一转运至沟内荷叶寨
+🍽️ 11:30 沟口午餐（推荐）：
+   ①私享旅行酒店旁·网红西红柿汤锅（就在行李寄存点旁边，方便！人均40-60元）
+   ②沟口藏式餐馆（藏式炒饭/牦牛肉面，人均30-50元）
+   ③沟口小吃街（抄手/米粉/烤串，人均20-30元）
+🏨 入住荷叶寨民宿，穿好装备，轻装进沟
+🚌 13:00 乘观光车直达长海站（Y字左支最高点，约40min车程）
+🌊 13:40-15:10 【Y字左支·则查洼沟】
+   →长海 🚶下车20-30min（九寨沟最大最深湖泊，视野辽阔。左支唯一值得深度停留的大海子）
+   →步行下山1km→五彩池 🚶下车20-30min（九寨沟色彩之最！蓝绿色调变化神奇，必看经典）
+💦 15:10-16:00 诺日朗瀑布🚶下车15-20min + 车至盆景滩
+   →诺日朗瀑布（中国最宽钙华瀑布宽300m，拍几张就走）
+   →🍓重点：看完诺日朗后乘车→盆景滩下车🚶10-15min（这段中心线今天必须走！明天12点前无车有风险）
+🚌 16:00-16:30 盆景滩→荷叶寨（乘车约10min，建议乘车保留体力给明天右支）
+🏡 16:30-18:00 返回民宿休息暖和
+🥘 18:30 晚餐（推荐）：
+   ①荷叶寨内民宿餐厅（最方便，牦牛肉汤锅/酥油茶/青稞饼，人均50-80元）
+   ②塞里·珠穆朗玛藏餐厅（树正寨附近，牦牛肉火锅，人均80-120元）
+   ③树正寨藏式小店（藏面/炒饭，人均30-50元）
+🛏️ 20:30 早睡！明天早起冲右支
+
+Day3 · 5月1日（周四）九寨沟·右支精华+中心线+返成都
+---------------------------------
+⏰ 天气：21/9℃，持续降雨，全程最冷！加穿羽绒服+暖宝宝
+⏰ 硬性时间约束（每步留足缓冲）：
+   17:30 末班大巴（不能误！）→ 16:30前取好行李 → 16:00结束游览 → 12:00后才能走中心线
+   → 右支窗口8:00-12:00（4h充足！）→ 午餐12:00-13:00 → 中心线13:00-16:00（3h很宽松）
+🍳 07:00 民宿早餐，退房（行李送至沟口寄存处·彭丰村私享旅行酒店）
+🚌 07:40 民宿带到荷叶寨门口搭车 → 首班车直达原始森林站（40min车程）
+   💡上午观光车统一送右支（日则沟），正好匹配计划
+   【Y字右支·日则沟·精华中的精华】
+🌲 08:20-09:20 原始森林→芳草海→天鹅海 3km
+   →原始森林 ⏭️可跳过（和其他森林类似）
+   →芳草海→天鹅海 🚶有体力才走3km（🍓推荐！和其他景点完全不同，但雨天泥泞妈妈量力）
+   💡体力不足：原始森林站上车→直达箭竹海站开始精华段
+🎋 09:20-10:00 箭竹海→熊猫海
+   →箭竹海 🚶下车15-20min（张艺谋《英雄》取景地）
+   →熊猫海 🚶下车15-20min（湖水碧蓝，传说熊猫来此饮水）
+   →熊猫海瀑布 🚌路过观赏
+💎 10:00-11:00 五花海 ⭐⭐⭐🚶下车40-50min（九寨沟镇沟之宝！上午光线最好，雨后颜色更浓，沿栈道走一圈800m）
+💧 11:00-11:40 珍珠滩瀑布 ⭐⭐🚶下车30min（西游记片尾曲取景地！）
+🪞 11:40-12:00 镜海🚌车上观览（雨天有雨纹，镜面效果打折）→ 乘车回诺日朗
+🍱 12:00-13:00 诺日朗中心午餐
+   ①诺日朗餐厅（景区内唯一，人均60-100元）
+   ②自备干粮推荐！自热米饭/面包+巧克力+坚果，节省排队时间
+🌿 13:00-15:30 【中心线·12点后安全段】
+   🍓昨日已完成"诺日朗→盆景滩"，今天重点补<b>犀牛海</b>
+   →诺日朗瀑布 ⏭️昨天看过可跳过
+   →犀牛海 🚶下车20-30min（九寨沟第二大湖泊，倒影绝美！昨天车览没下车，今天必停）
+   →老虎海 🚌车上观览
+   →树正群海 🚶下车15-20min（19个海子+藏寨，昨天看过可快走或跳过）
+   →火花海/树正瀑布/盆景滩 🚌车览或跳过（昨天看过）
+   💡实际只需30-60min即可完成，14:00-14:30能结束
+☕ 15:00-16:00 树正寨/诺日朗休息（缓冲时间，喝热饮暖和，买纪念品）
+🚌 16:00-16:30 乘观光车/步行 → 出沟口
+🧳 16:30-17:00 取行李（彭丰村「私享旅行酒店」，藏王广场肯德基隔壁）
+   → 取好行李立即前往藏王宴停车场候车
+🚌 17:30 九寨沟口大巴→松潘→成都东（约5.5h）
+   松潘21:37→23:12成都东 / 或大巴直达成都龙泉约22:30
+   ❗绝不能错过末班车！
+😴 23:00-23:30 抵达成都龙泉汉庭酒店
+
+📊 今日景点优先级（时间紧张按此取舍）：
+🚶必须下车：五花海50min > 珍珠滩30min > 犀牛海20-30min > 五彩池30min > 箭竹海20min > 熊猫海20min
+🚶推荐下车：芳草海→天鹅海（体力OK）> 长海20min > 诺日朗15min > 树正群海15min
+🚌车上观览：镜海 > 芦苇海 > 火花海 > 老虎海 > 熊猫海瀑布 > 盆景滩（昨天看过）
+
+Day4 · 5月2日（周五）成都→乐山·美食日
+---------------------------------
+⏰ 天气：乐山26/17℃，阴天宜游，全程最轻松的一天
+🍳 08:00 成都早餐：蛋烘糕/锅盔/豆花饭（人均10-20元）
+🚄 09:30 成都东→乐山高铁（约30分钟，二等座约¥32）
+   推荐班次：10:25发→11:18抵乐山（西广场进站）
+🏨 11:30 打车至嘉兴路美食街酒店，入住放行李
+🥘 12:30 午餐：乐山跷脚牛肉（推荐）：
+   ①冯三嬢跷脚牛肉（嘉定南路总店，人均40-60元，牛骨老汤+粉蒸肥肠+血旺）
+   ②古真记钵钵鸡（东大街，人均30-50元，红油藤椒两种口味）
+   ③游氏老嘉州跷脚牛肉（老字号，汤底鲜醇，人均35-50元，适合不太辣的长辈）
+   ⚠️午高峰可能等位，可先叫号再逛街
+🏛️ 14:00 下午漫步：嘉定坊→茫溪河步道→大佛寺外围感受氛围
+🍽️ 18:00 晚餐：乐山美食大扫荡（推荐）：
+   ①张公桥美食街（最热闹）：
+     ·赵鸭子/王浩儿甜皮鸭（乐山独有！人均25-35元/半只）
+     ·嘉州烤鱼（豆花鱼/泡椒口味，人均60-80元）
+     ·翘脚鳝丝（乐山独有，人均40-50元）
+   ②嘉兴路美食街（就在酒店楼下！）：
+     ·钵钵鸡/叶儿粑/豆腐脑，人均30-50元
+🛏️ 20:30 早睡！明天7:30大佛景区开门
+
+Day5 · 5月3日（周六）乐山大佛·A游船/B对岸观佛·傍晚高铁回成都
+---------------------------------
+⏰ 天气：25/19℃，雨转阴，备雨具
+🚂 今日高铁：17:53乐山→18:25成都南（不是中午！下午有整整一天在乐山）
+⚠️ 游船票务必提前10天在「大佛旅游」小程序抢！五一抢票极难
+🍳 07:00 乐山早餐（推荐）：
+   ①高师傅豆腐脑（嘉兴路店，就在酒店附近！人均12-18元，7:00开门）
+   ②九九豆腐脑（总店，人均15-20元，加粉条是特色）
+   ③四方豆腐脑（本地人也爱去，人均10-15元）
+
+🅰️ A方案·抢到游船票走这条：
+🚕 07:30 打车到乌尤寺码头（导航"乐山大佛乌尤寺码头"，约15min）
+   或选嘉州渡码头（大佛左侧，航线风景更好）
+🚢 08:00-08:30 到达码头排队登船（提前30min到）
+🚢 08:30/09:30 游船出发！
+   💡坐在船右侧（面向大佛方向），拍照角度最佳
+   全程30-40分钟，船到大佛正面减速停留5-10min拍大佛+睡佛
+🛕 09:00/10:00 下船→凌云寺祈福→佛头平台拍照→北门出（约30min）
+   ⏱️ A方案全程约2.5h（含排队），11:00前结束，剩余一下午逛吃！
+
+🅱️ B方案·没抢到船票走这条（同样精彩！）：
+🚕 07:30 打车导航"太阳岛看乐山大佛全景"
+   📍怎么去：乐山市区→大渡河大桥→高新区→小桥上岛
+   备选：滨河路"铁牛门码头"坐渡船，船票约2元（雨天可能停航）
+👁️ 08:00-09:30 太阳岛观大佛全景（免费！）
+   📍太阳岛（凤洲岛/大佛坝）在大佛正对面，隔岷江相望
+   📍导航：高德搜"太阳岛"或"凤洲岛"或"大佛坝"
+   📸 8:00-9:00光线从东面照大佛，拍照最佳
+🚕 09:30-10:00 打车返回市区
+🚶 10:00-12:30 市内深度游（约2.5h）
+   →老霄顶公园（免费·城区制高点·俯瞰大佛）约1h
+   →乌尤寺（¥8·千年古寺·清幽·游客极少）约40min
+   →乐山港滨江绿道（免费·岷江西岸）约30min
+   ⏱️ B方案12:30前结束，下午同样有充足时间逛吃
+
+🍜 12:30 A/B汇合·乐山大餐（推荐）：
+   ①海汇源老烧麦（东大街店，百年老字号！人均30-50元）
+   ②冯三嬢跷脚牛肉（嘉定南路总店，人均40-60元）
+   ③游记肥肠（嘉定中路，人均40-50元）
+🏙️ 14:00-16:30 下午悠闲逛吃（2.5h）
+   嘉定坊古街→上中街/东大街（小吃扎堆）→岷江边散步→临江茶馆
+   必吃小吃：赵鸭子甜皮鸭 / 叶婆婆钵钵鸡 / 冰粉凉糕
+🏨 16:00-16:30 回酒店取行李
+🚕 16:30-17:00 打车前往乐山站（约15min）
+🚄 17:53 乐山→成都南（32min，二等座约¥54）
+   ❗最迟17:30必须进站！
+🏨 19:00-19:30 入住芳草街地铁站公寓酒店（地铁1号线→芳草街站）
+🌙 19:30-21:00 晚餐（推荐）：
+   ①冒椒火辣（玉林路总店，冷锅串串，人均60-80元。⚠️排队1h+提前取号）
+   ②青年火锅（玉林店，本地火锅，人均80-100元）
+   ③严太婆锅盔（芳草街，人均10-15元，买几个当夜宵）
+🛏️ 21:30 早睡！明天熊猫基地7:00出发
+
+Day6 · 5月4日（周日）熊猫基地+成都最后探索
+---------------------------------
+⏰ 天气：26/19℃，有雨，熊猫雨天户外更活跃！
+🍳 07:00 快速早餐，打包出门
+🚕 07:30 打车/地铁→熊猫基地（提前3天预约！¥55/人）
+🐼 08:00-11:00 熊猫基地（❗8:00进最值，10:30后熊猫开始睡觉）
+   打卡路线：月亮产房→熊猫幼儿园→成年大熊猫室外场→红熊猫区
+🚕 11:00 打车返市区，午餐（推荐）：
+   ①马旺子·川小馆（太古里旁，排队王！人均60-80元。⚠️11:00远程取号）
+   ②柴门饭儿（IFS/太古里，环境好中档川菜，人均70-100元）
+   ③少城老面馆（宽窄巷子附近，担担面+鸡杂面，人均15-25元）
+🏘️ 13:00 宽窄巷子Citywalk：宽巷子老茶馆→窄巷子甜品→井巷子涂鸦
+🛕 文殊院（宽窄旁）：拜拜求签
+☕ 找院落茶馆，喝盖碗茶休憩（成都精髓！）
+🔥 18:00 最后晚餐：正宗成都牛油火锅（推荐）：
+   ①小龙翻大江火锅（宽窄巷子店，网红天花板！人均120-150元。⚠️排队极长提前取号）
+   ②电台巷火锅（玉林店，重庆风味不太辣，人均80-100元）
+   ③蜀大侠火锅（芳草街附近，花千骨排骨是特色，人均100-130元）
+   必点：毛肚/鸭肠/肥牛/脑花/酥肉
+🛏️ 21:00 整理行李，明天返程
+
+Day7 · 5月5日（周一）返程
+---------------------------------
+⏰ 天气：27/18℃，雨转阴
+🥞 根据航班灵活安排，成都最后早餐（推荐）：
+   ①严太婆锅盔（芳草街店，人均10-15元，牛肉/猪肉馅现烤，买几个带走吃+当手信）
+   ②贺记蛋烘糕（多处有店，人均5-10元，奶油/肉松/花生各种口味）
+   ③陆老爹猪脚面（玉林路，人均15-20元，吃饱有力气赶飞机）
+🛍️ 行前手信：郫县豆瓣酱/老干妈（超市买比机场便宜）+各类四川零食
+🚇 提前3小时出发：芳草街→火车南站→地铁18号线直达→天府机场T2
+   ⚠️ 五一返程高峰，机场安检排队长！请务必提前3小时到机场
+✈️ 天府T2 → 美兰T2 飞回，满载而归~
+
+═══════════════════════════════
+📝 重要避坑提示
+①九寨沟：现场无票，必须提前在"阿坝旅游网"公众号预约
+②九寨沟→成都：5/1 17:30末班大巴绝不能错过，16:30前取好行李
+③高铁站≠景区：黄龙九寨站距景区还需90km接驳车程（五一期可能堵车1.5-3h）
+④九寨沟行李寄存：到达沟口后寄存至彭丰村「私享旅行酒店」（藏王广场肯德基隔壁），脚程10-20min
+⑤九寨沟观光车规则：上午统一送右支（日则沟），下午可到左支（则查洼沟）
+⑥中心线12点前别去：上午只有去右支的车，12点后双向通车安全
+⑦荷叶寨优势：住沟内第二天可搭首班车冲原始森林，比外面游客早1-2小时
+⑧乐山大佛游船票：五一提前10天以上在「大佛旅游」小程序抢，现场买不到
+⑨乐山大佛B方案：太阳岛免费观大佛全景（导航"太阳岛/凤洲岛"），无需进景区
+⑩乐山回成都高铁：5/3 17:53乐山→18:25成都南，最迟17:30进站
+⑪熊猫基地：10:30前入园，之后熊猫全部睡觉
+⑫雨天必备：冲锋衣+折叠伞+防滑鞋（全程基本都有雨）
+⑬行李建议：大件行李留成都，九寨沟只带轻便登山包
+⑭高反预防：九寨沟2000m+，禁止剧烈运动，备葡萄糖能量棒
+  </div>
+</div>
+
+<div style="text-align:center;padding:24px;color:#6b7280;font-size:.85rem;margin-top:8px">
+  ✨ 愿这趟旅程带来满满的美好回忆 · 注意安全 · 玩得开心 ✨<br>
+  <span style="font-size:.78rem;margin-top:4px;display:block">天气数据来源：中央气象台 2026.4.23更新 · 长期预报仅供参考，出发前请重新查询最新预报</span>
+</div>
+
+<script>
+function copyText() {
+  const text = document.getElementById('copytext').innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('.copy-btn');
+    btn.textContent = '✅ 已复制！';
+    setTimeout(() => btn.textContent = '📋 一键复制', 2000);
+  }).catch(() => {
+    const range = document.createRange();
+    range.selectNode(document.getElementById('copytext'));
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+    const btn = document.querySelector('.copy-btn');
+    btn.textContent = '✅ 已复制！';
+    setTimeout(() => btn.textContent = '📋 一键复制', 2000);
+  });
+}
+</script>
+
+</div><!-- /container -->
+</body>
+</html>
