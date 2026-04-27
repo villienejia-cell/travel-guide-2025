@@ -210,14 +210,14 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
     <!-- 专属路线图 SVG -->
     <div style="background:#f8fff8;border-radius:10px;padding:12px;margin-bottom:14px">
       <div style="font-weight:700;font-size:.88rem;color:#1a5632;margin-bottom:8px">九寨沟 Y字型专属路线图</div>
-      <svg viewBox="0 0 360 520" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:400px;display:block;margin:0 auto">
+      <svg id="svg-map" viewBox="0 0 360 520" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:400px;display:block;margin:0 auto;cursor:pointer" onclick="openLightboxSVG()">
         <!-- 底色 -->
         <rect width="360" height="520" fill="#f0faf4" rx="8"/>
         
         <!-- ===== 中线（树正沟）==== -->
         <path d="M180 480 L180 200" stroke="#f5a623" stroke-width="8" fill="none" stroke-linecap="round"/>
         <text x="188" y="340" font-size="10" fill="#c08000" font-weight="700">中线·树正沟</text>
-        <text x="188" y="352" font-size="8" fill="#c08000">中心线（橙）</text>
+        <text x="188" y="352" font-size="8" fill="#c08000">入口→诺日朗▲</text>
         
         <!-- 中线节点 -->
         <circle cx="180" cy="480" r="7" fill="#f5a623"/>
@@ -245,7 +245,7 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
         <!-- ===== 左支（则查洼沟）===== -->
         <path d="M180 200 Q120 160 80 100 Q50 50 90 10" stroke="#6ab0e8" stroke-width="8" fill="none" stroke-linecap="round"/>
         <text x="60" y="80" font-size="10" fill="#3a8fc7" font-weight="700">左支·则查洼沟</text>
-        <text x="60" y="92" font-size="8" fill="#3a8fc7">坐左侧观景</text>
+        <text x="60" y="92" font-size="8" fill="#3a8fc7">去程▲回程▼坐左侧</text>
         
         <!-- 左支节点 -->
         <circle cx="90" cy="10" r="9" fill="#4a9fe8" stroke="#fff" stroke-width="2"/>
@@ -264,7 +264,7 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
         <!-- ===== 右支（日则沟）===== -->
         <path d="M180 200 Q240 160 280 100 Q320 50 280 10" stroke="#5cb85c" stroke-width="8" fill="none" stroke-linecap="round"/>
         <text x="248" y="80" font-size="10" fill="#3a8a3a" font-weight="700">右支·日则沟</text>
-        <text x="248" y="92" font-size="8" fill="#3a8a3a">坐右侧观景</text>
+        <text x="248" y="92" font-size="8" fill="#3a8a3a">去程▲坐右侧·回程▼坐左侧</text>
         
         <!-- 右支节点 -->
         <circle cx="280" cy="10" r="7" fill="#5cb85c"/>
@@ -290,27 +290,58 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
         <rect x="140" y="498" width="80" height="18" rx="9" fill="#88d8b0"/>
         <text x="180" y="510" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">景区入口</text>
         
-        <!-- 箭头指示 -->
-        <path d="M180 485 L180 210" stroke="#aaa" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+        <!-- 去程/回程箭头指示 -->
+        <!-- 中线上行箭头（入口→诺日朗） -->
+        <line x1="168" y1="460" x2="168" y2="435" stroke="#e8940a" stroke-width="2.5" marker-end="url(#arr-org)"/>
+        <line x1="168" y1="370" x2="168" y2="345" stroke="#e8940a" stroke-width="2.5" marker-end="url(#arr-org)"/>
+        <line x1="168" y1="280" x2="168" y2="255" stroke="#e8940a" stroke-width="2.5" marker-end="url(#arr-org)"/>
+        <!-- 左支去程箭头（诺日朗→长海） -->
+        <line x1="167" y1="183" x2="152" y2="168" stroke="#4a9fe8" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+        <line x1="112" y1="120" x2="98" y2="102" stroke="#4a9fe8" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+        <line x1="82" y1="55" x2="86" y2="35" stroke="#4a9fe8" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+        <!-- 左支长海→五彩池步行 -->
+        <path d="M100 15 L112 40" stroke="#c0766c" stroke-width="2" fill="none" stroke-dasharray="4,3" marker-end="url(#arr-walk)"/>
+        <text x="72" y="32" font-size="7" fill="#c0766c" font-weight="600">步行1km↓</text>
+        <!-- 右支去程箭头（诺日朗→原始森林） -->
+        <line x1="193" y1="183" x2="208" y2="168" stroke="#4caf50" stroke-width="2.5" marker-end="url(#arr-green)"/>
+        <line x1="248" y1="120" x2="260" y2="102" stroke="#4caf50" stroke-width="2.5" marker-end="url(#arr-green)"/>
+        <line x1="285" y1="55" x2="283" y2="35" stroke="#4caf50" stroke-width="2.5" marker-end="url(#arr-green)"/>
+        <!-- 右支回程箭头（原始森林→诺日朗） -->
+        <line x1="275" y1="32" x2="270" y2="50" stroke="#6dc76d" stroke-width="2" marker-end="url(#arr-green2)"/>
+        <line x1="255" y1="98" x2="248" y2="115" stroke="#6dc76d" stroke-width="2" marker-end="url(#arr-green2)"/>
+        <line x1="215" y1="158" x2="207" y2="173" stroke="#6dc76d" stroke-width="2" marker-end="url(#arr-green2)"/>
+
         <defs>
-          <marker id="arrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-            <path d="M0,0 L6,3 L0,6 Z" fill="#aaa"/>
+          <marker id="arr-org" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+            <path d="M0,0 L10,4 L0,8 Z" fill="#e8940a"/>
+          </marker>
+          <marker id="arr-blue" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+            <path d="M0,0 L10,4 L0,8 Z" fill="#4a9fe8"/>
+          </marker>
+          <marker id="arr-green" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+            <path d="M0,0 L10,4 L0,8 Z" fill="#4caf50"/>
+          </marker>
+          <marker id="arr-green2" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto">
+            <path d="M10,0 L0,4 L10,8 Z" fill="#6dc76d"/>
+          </marker>
+          <marker id="arr-walk" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#c0766c"/>
           </marker>
         </defs>
         
         <!-- 图例 -->
-        <rect x="8" y="470" width="130" height="42" rx="6" fill="rgba(255,255,255,0.8)"/>
+        <rect x="8" y="470" width="200" height="42" rx="6" fill="rgba(255,255,255,0.85)"/>
         <text x="14" y="484" font-size="8" fill="#555" font-weight="700">图例</text>
-        <circle cx="22" cy="495" r="5" fill="#4a9fe8"/>
-        <text x="32" y="498" font-size="8" fill="#555">左支（坐左侧）</text>
-        <circle cx="22" cy="508" r="5" fill="#5cb85c"/>
-        <text x="32" y="511" font-size="8" fill="#555">右支（坐右侧）</text>
-        <circle cx="90" cy="495" r="5" fill="#f5a623"/>
-        <text x="100" y="498" font-size="8" fill="#555">中线（树正沟）</text>
-        <circle cx="90" cy="508" r="5" fill="#e57373"/>
-        <text x="100" y="511" font-size="8" fill="#e57373">★必打卡</text>
+        <line x1="14" y1="498" x2="28" y2="498" stroke="#e8940a" stroke-width="2.5" marker-end="url(#arr-org)"/>
+        <text x="42" y="501" font-size="7" fill="#555">中线(入口→诺日朗)</text>
+        <line x1="14" y1="508" x2="28" y2="508" stroke="#4a9fe8" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+        <text x="42" y="511" font-size="7" fill="#555">左支(去程▲坐左侧)</text>
+        <line x1="120" y1="498" x2="134" y2="498" stroke="#4caf50" stroke-width="2.5" marker-end="url(#arr-green)"/>
+        <text x="148" y="501" font-size="7" fill="#555">右支(去程▲坐右侧)</text>
+        <line x1="120" y1="508" x2="134" y2="508" stroke="#6dc76d" stroke-width="2" marker-end="url(#arr-green2)"/>
+        <text x="148" y="511" font-size="7" fill="#555">回程(▼坐左侧)</text>
       </svg>
-      <div style="font-size:.72rem;color:#888;text-align:center;margin-top:6px">九寨沟Y字型路线图 · 依据小红书笔记绘制（点击放大）</div>
+      <div style="font-size:.72rem;color:#888;text-align:center;margin-top:6px">九寨沟Y字型路线图 · 依据小红书笔记绘制 · ▲去程 ▼回程 · 虚线=步行段（点击放大）</div>
     </div>
 
     <!-- 观光车选座指南 -->
@@ -1063,11 +1094,27 @@ B方案(无游船票)：07:30太阳岛免费观全景→市内游→12:30出
 <!-- 灯箱 -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <img id="lb-img" src="">
+  <div id="lb-svg" style="display:none"></div>
 </div>
 
 <script>
 function openLightbox(img){
   document.getElementById('lb-img').src=img.src;
+  document.getElementById('lb-img').style.display='';
+  document.getElementById('lb-svg').style.display='none';
+  document.getElementById('lightbox').classList.add('show');
+}
+function openLightboxSVG(){
+  var svg=document.getElementById('svg-map');
+  var clone=svg.cloneNode(true);
+  clone.removeAttribute('id');
+  clone.removeAttribute('style');
+  clone.setAttribute('style','width:90vw;max-width:800px;height:auto');
+  var lbSvg=document.getElementById('lb-svg');
+  lbSvg.innerHTML='';
+  lbSvg.appendChild(clone);
+  document.getElementById('lb-img').style.display='none';
+  lbSvg.style.display='flex';
   document.getElementById('lightbox').classList.add('show');
 }
 function closeLightbox(){
