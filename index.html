@@ -152,6 +152,8 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 
 <!-- 快捷导航 -->
 <div class="day-nav">
+  <a href="#notes" style="background:#fff3e0;border-color:#f5c87a;color:#b8860b;font-weight:700">📍必读攻略</a>
+  <span class="sep">|</span>
   <a href="#d1">Day1 成都</a>
   <a href="#d2">Day2 九寨左支+中心</a>
   <a href="#d3">Day3 九寨右支</a>
@@ -180,15 +182,15 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
 <!-- 天气 -->
 <div class="card">
   <div class="card-body">
-    <div style="font-weight:700;font-size:.9rem;margin-bottom:4px">天气预报（4.23更新，出发前请复查）</div>
+    <div style="font-weight:700;font-size:.9rem;margin-bottom:4px">天气预报（<span style="color:#c0766c">4.29今日更新</span>，出发前请复查）</div>
     <div class="weather">
-      <div class="wc"><div class="d">4/29</div><div class="city">成都</div><div class="tmp">28/16</div><div>多云</div></div>
-      <div class="wc rain"><div class="d">4/30</div><div class="city">九寨沟</div><div class="tmp">23/11</div><div>雨转阴</div></div>
-      <div class="wc rain"><div class="d">5/1</div><div class="city">九寨沟</div><div class="tmp">21/9</div><div><b>持续降雨</b></div></div>
-      <div class="wc rain"><div class="d">5/2</div><div class="city">九寨→乐山</div><div class="tmp">22/26</div><div>九雨·乐阴</div></div>
-      <div class="wc rain"><div class="d">5/3</div><div class="city">乐山</div><div class="tmp">25/19</div><div>雨转阴</div></div>
-      <div class="wc rain"><div class="d">5/4</div><div class="city">成都</div><div class="tmp">26/19</div><div>有雨</div></div>
-      <div class="wc rain"><div class="d">5/5</div><div class="city">成都</div><div class="tmp">27/18</div><div>雨转阴</div></div>
+      <div class="wc" style="background:#fff3e0;border-color:#f5c87a"><div class="d">4/29 今日</div><div class="city">成都</div><div class="tmp" style="color:#c08000">27/17</div><div style="color:#c08000;font-weight:600">出发日 晴转阴</div></div>
+      <div class="wc rain"><div class="d">4/30</div><div class="city">九寨沟</div><div class="tmp">22/10</div><div>雨转阴</div></div>
+      <div class="wc rain"><div class="d">5/1</div><div class="city">九寨沟</div><div class="tmp">20/8</div><div><b>持续降雨</b></div></div>
+      <div class="wc rain"><div class="d">5/2</div><div class="city">九寨→乐山</div><div class="tmp">22/25</div><div>九雨·乐阴</div></div>
+      <div class="wc rain"><div class="d">5/3</div><div class="city">乐山</div><div class="tmp">26/18</div><div>雨转阴</div></div>
+      <div class="wc rain"><div class="d">5/4</div><div class="city">成都</div><div class="tmp">25/18</div><div>有雨</div></div>
+      <div class="wc rain"><div class="d">5/5</div><div class="city">成都</div><div class="tmp">26/17</div><div>雨转阴</div></div>
     </div>
     <div class="key-box orange" style="margin-top:8px">
       <b>九寨沟 5/1 最低仅9度</b>，必备：防水冲锋衣 + 折叠伞 + 防滑运动鞋。木栈道雨天极滑，九曲栈道禁穿裙子拖鞋。
@@ -210,162 +212,153 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;backgr
     <!-- 专属路线图 SVG -->
     <div style="background:#f8fff8;border-radius:10px;padding:12px;margin-bottom:14px">
       <div style="font-weight:700;font-size:.88rem;color:#1a5632;margin-bottom:8px">九寨沟 Y字型专属路线图</div>
-      <svg id="svg-map" viewBox="0 0 380 580" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;display:block;margin:0 auto;cursor:pointer" onclick="openLightboxSVG()">
+      <svg id="svg-map" viewBox="0 0 560 820" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px;display:block;margin:0 auto;cursor:pointer" onclick="openLightboxSVG()">
         <defs>
           <!-- 去程箭头（实心，沿外侧） -->
-          <marker id="ao" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6Z" fill="#d4880a"/></marker>
-          <marker id="ab" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6Z" fill="#3a8fd8"/></marker>
-          <marker id="ag" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6Z" fill="#3a9e3a"/></marker>
+          <marker id="ao" markerWidth="10" markerHeight="9" refX="9" refY="4.5" orient="auto"><path d="M0,0 L10,4.5 L0,9Z" fill="#d4880a"/></marker>
+          <marker id="ab" markerWidth="10" markerHeight="9" refX="9" refY="4.5" orient="auto"><path d="M0,0 L10,4.5 L0,9Z" fill="#3a8fd8"/></marker>
+          <marker id="ag" markerWidth="10" markerHeight="9" refX="9" refY="4.5" orient="auto"><path d="M0,0 L10,4.5 L0,9Z" fill="#3a9e3a"/></marker>
           <!-- 回程箭头（空心，沿内侧虚线） -->
-          <marker id="aob" markerWidth="7" markerHeight="6" refX="1" refY="3" orient="auto"><path d="M7,0 L0,3 L7,6Z" fill="none" stroke="#d4880a" stroke-width="1.2"/></marker>
-          <marker id="abb" markerWidth="7" markerHeight="6" refX="1" refY="3" orient="auto"><path d="M7,0 L0,3 L7,6Z" fill="none" stroke="#3a8fd8" stroke-width="1.2"/></marker>
-          <marker id="agb" markerWidth="7" markerHeight="6" refX="1" refY="3" orient="auto"><path d="M7,0 L0,3 L7,6Z" fill="none" stroke="#3a9e3a" stroke-width="1.2"/></marker>
+          <marker id="aob" markerWidth="10" markerHeight="9" refX="1" refY="4.5" orient="auto"><path d="M10,0 L0,4.5 L10,9Z" fill="none" stroke="#d4880a" stroke-width="1.6"/></marker>
+          <marker id="abb" markerWidth="10" markerHeight="9" refX="1" refY="4.5" orient="auto"><path d="M10,0 L0,4.5 L10,9Z" fill="none" stroke="#3a8fd8" stroke-width="1.6"/></marker>
+          <marker id="agb" markerWidth="10" markerHeight="9" refX="1" refY="4.5" orient="auto"><path d="M10,0 L0,4.5 L10,9Z" fill="none" stroke="#3a9e3a" stroke-width="1.6"/></marker>
           <!-- 步行箭头 -->
-          <marker id="aw" markerWidth="6" markerHeight="5" refX="5" refY="2.5" orient="auto"><path d="M0,0 L6,2.5 L0,5Z" fill="#c0766c"/></marker>
+          <marker id="aw" markerWidth="9" markerHeight="7" refX="7" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7Z" fill="#c0766c"/></marker>
         </defs>
 
         <!-- 底色 -->
-        <rect width="380" height="580" fill="#f0faf4" rx="8"/>
+        <rect width="560" height="820" fill="#f0faf4" rx="10"/>
 
-        <!-- ============ 主路线粗线（实线，无方向） ============ -->
-        <!-- 中线：入口(y=530) → 诺日朗(y=240) -->
-        <path d="M190 530 L190 240" stroke="#f5a623" stroke-width="5" fill="none" stroke-linecap="round"/>
-        <!-- 左支：诺日朗(190,240) → 长海(80,42)  两段二次贝塞尔 -->
-        <path d="M190 240 Q130 195 92 135 Q60 80 80 42" stroke="#6ab0e8" stroke-width="5" fill="none" stroke-linecap="round"/>
-        <!-- 右支：诺日朗(190,240) → 原始森林(298,42) -->
-        <path d="M190 240 Q250 195 288 135 Q320 80 298 42" stroke="#5cb85c" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <!-- ============ 主路线粗线 ============ -->
+        <!-- 中线 -->
+        <path d="M280 760 L280 340" stroke="#f5a623" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <!-- 左支 -->
+        <path d="M280 340 Q190 275 136 188 Q88 114 116 58" stroke="#6ab0e8" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <!-- 右支 -->
+        <path d="M280 340 Q370 275 424 188 Q472 114 444 58" stroke="#5cb85c" stroke-width="8" fill="none" stroke-linecap="round"/>
 
-        <!-- ============ 去程方向箭头（实线，沿路线外侧偏移8px） ============ -->
-        <!-- 中线去程：外侧=右侧偏移 -->
-        <path d="M196 480 L196 450" stroke="#d4880a" stroke-width="1.4" fill="none" marker-end="url(#ao)"/>
-        <!-- 左支去程：外侧=左侧 -->
-        <path d="M136 145 L126 125" stroke="#3a8fd8" stroke-width="1.4" fill="none" marker-end="url(#ab)"/>
-        <path d="M80 85 L72 65" stroke="#3a8fd8" stroke-width="1.4" fill="none" marker-end="url(#ab)"/>
-        <!-- 右支去程：外侧=右侧 -->
-        <path d="M244 145 L254 125" stroke="#3a9e3a" stroke-width="1.4" fill="none" marker-end="url(#ag)"/>
-        <path d="M300 85 L308 65" stroke="#3a9e3a" stroke-width="1.4" fill="none" marker-end="url(#ag)"/>
+        <!-- ============ 去程箭头（外侧实线） ============ -->
+        <path d="M289 688 L289 645" stroke="#d4880a" stroke-width="2" fill="none" marker-end="url(#ao)"/>
+        <path d="M199 205 L186 178" stroke="#3a8fd8" stroke-width="2" fill="none" marker-end="url(#ab)"/>
+        <path d="M118 120 L106 94" stroke="#3a8fd8" stroke-width="2" fill="none" marker-end="url(#ab)"/>
+        <path d="M361 205 L374 178" stroke="#3a9e3a" stroke-width="2" fill="none" marker-end="url(#ag)"/>
+        <path d="M442 120 L454 94" stroke="#3a9e3a" stroke-width="2" fill="none" marker-end="url(#ag)"/>
 
-        <!-- ============ 回程方向箭头（虚线，沿路线内侧偏移8px） ============ -->
-        <!-- 中线回程：内侧=左侧偏移 -->
-        <path d="M184 450 L184 480" stroke="#d4880a" stroke-width="1.2" fill="none" stroke-dasharray="4,3" marker-end="url(#aob)" opacity=".6"/>
-        <!-- 左支回程：内侧=右侧 -->
-        <path d="M88 65 L96 85" stroke="#3a8fd8" stroke-width="1.2" fill="none" stroke-dasharray="4,3" marker-end="url(#abb)" opacity=".55"/>
-        <!-- 右支回程：内侧=左侧 -->
-        <path d="M284 65 L276 85" stroke="#3a9e3a" stroke-width="1.2" fill="none" stroke-dasharray="4,3" marker-end="url(#agb)" opacity=".55"/>
+        <!-- ============ 回程箭头（内侧虚线） ============ -->
+        <path d="M271 645 L271 688" stroke="#d4880a" stroke-width="1.8" fill="none" stroke-dasharray="6,4" marker-end="url(#aob)" opacity=".6"/>
+        <path d="M130 94 L142 120" stroke="#3a8fd8" stroke-width="1.8" fill="none" stroke-dasharray="6,4" marker-end="url(#abb)" opacity=".55"/>
+        <path d="M430 94 L418 120" stroke="#3a9e3a" stroke-width="1.8" fill="none" stroke-dasharray="6,4" marker-end="url(#agb)" opacity=".55"/>
 
-        <!-- ============ 景点圆点（全部在粗线上） ============ -->
-        <!-- 中线节点 -->
-        <circle cx="190" cy="530" r="6" fill="#f5a623" stroke="#fff" stroke-width="1.5"/>
-        <text x="206" y="526" font-size="8.5" fill="#555" font-weight="600">盆景滩</text>
-        <text x="206" y="538" font-size="7" fill="#999">下车 · 20min</text>
+        <!-- ============ 中线节点 ============ -->
+        <circle cx="280" cy="760" r="9" fill="#f5a623" stroke="#fff" stroke-width="2"/>
+        <text x="300" y="754" font-size="17" fill="#555" font-weight="600">盆景滩</text>
+        <text x="300" y="773" font-size="14" fill="#999">下车 · 20min</text>
 
-        <circle cx="190" cy="478" r="5" fill="#f5a623" stroke="#fff" stroke-width="1.5"/>
-        <text x="206" y="475" font-size="8.5" fill="#555" font-weight="600">芦苇海</text>
-        <text x="206" y="487" font-size="7" fill="#c08000">★必下 · 30min</text>
+        <circle cx="280" cy="694" r="8" fill="#f5a623" stroke="#fff" stroke-width="2"/>
+        <text x="300" y="688" font-size="17" fill="#555" font-weight="600">芦苇海</text>
+        <text x="300" y="706" font-size="14" fill="#c08000">★必下 · 30min</text>
 
-        <circle cx="190" cy="428" r="5" fill="#f5a623" stroke="#fff" stroke-width="1.5"/>
-        <text x="206" y="425" font-size="8.5" fill="#555" font-weight="600">火花海</text>
-        <text x="206" y="437" font-size="7" fill="#999">车览</text>
+        <circle cx="280" cy="614" r="7" fill="#f5a623" stroke="#fff" stroke-width="2"/>
+        <text x="300" y="609" font-size="17" fill="#555" font-weight="600">火花海</text>
+        <text x="300" y="626" font-size="14" fill="#999">车览</text>
 
-        <circle cx="190" cy="380" r="5" fill="#f5a623" stroke="#fff" stroke-width="1.5"/>
-        <text x="206" y="377" font-size="8.5" fill="#555" font-weight="600">双龙海</text>
-        <text x="206" y="389" font-size="7" fill="#999">车览</text>
+        <circle cx="280" cy="540" r="7" fill="#f5a623" stroke="#fff" stroke-width="2"/>
+        <text x="300" y="535" font-size="17" fill="#555" font-weight="600">双龙海</text>
+        <text x="300" y="552" font-size="14" fill="#999">车览</text>
 
-        <circle cx="190" cy="330" r="5" fill="#f5a623" stroke="#fff" stroke-width="1.5"/>
-        <text x="206" y="327" font-size="8.5" fill="#555" font-weight="600">犀牛海</text>
-        <text x="206" y="339" font-size="7" fill="#c08000">★必下 · 30min</text>
+        <circle cx="280" cy="470" r="7" fill="#f5a623" stroke="#fff" stroke-width="2"/>
+        <text x="300" y="465" font-size="17" fill="#555" font-weight="600">犀牛海</text>
+        <text x="300" y="482" font-size="14" fill="#c08000">★必下 · 30min</text>
 
-        <circle cx="190" cy="282" r="5" fill="#f5a623" stroke="#fff" stroke-width="1.5"/>
-        <text x="206" y="279" font-size="8.5" fill="#555" font-weight="600">老虎海</text>
-        <text x="206" y="291" font-size="7" fill="#999">车看</text>
+        <circle cx="280" cy="402" r="7" fill="#f5a623" stroke="#fff" stroke-width="2"/>
+        <text x="300" y="397" font-size="17" fill="#555" font-weight="600">老虎海</text>
+        <text x="300" y="414" font-size="14" fill="#999">车看</text>
 
-        <circle cx="190" cy="240" r="7" fill="#e8940a" stroke="#fff" stroke-width="2"/>
-        <text x="206" y="237" font-size="9" fill="#333" font-weight="700">诺日朗中心</text>
-        <text x="206" y="249" font-size="7" fill="#999">换乘站 · 瀑布30min</text>
+        <circle cx="280" cy="340" r="11" fill="#e8940a" stroke="#fff" stroke-width="2.5"/>
+        <text x="300" y="335" font-size="18" fill="#333" font-weight="700">诺日朗中心</text>
+        <text x="300" y="352" font-size="14" fill="#999">换乘站 · 瀑布30min</text>
 
         <!-- 中线标注 -->
-        <text x="100" y="385" font-size="7.5" fill="#c08000" font-weight="700">中线 · 树正沟</text>
+        <text x="152" y="548" font-size="15" fill="#c08000" font-weight="700">中线 · 树正沟</text>
 
-        <!-- ===== 左支节点（全部在粗曲线上） ===== -->
-        <!-- 长海：曲线终点 (80,42) -->
-        <circle cx="80" cy="42" r="7" fill="#4a9fe8" stroke="#fff" stroke-width="2"/>
-        <text x="18" y="35" font-size="9" fill="#333" font-weight="700">长海</text>
-        <text x="8" y="47" font-size="7" fill="#c08000">★必看 60min</text>
+        <!-- ============ 左支节点 ============ -->
+        <circle cx="116" cy="58" r="11" fill="#4a9fe8" stroke="#fff" stroke-width="2.5"/>
+        <text x="14" y="48" font-size="18" fill="#333" font-weight="700">长海</text>
+        <text x="8" y="68" font-size="14" fill="#c08000">★必看 60min</text>
 
-        <!-- 五彩池：左支曲线上约 t=0.35 → (70,72) -->
-        <circle cx="70" cy="72" r="5" fill="#6ab0e8" stroke="#fff" stroke-width="1.5"/>
-        <text x="12" y="68" font-size="8.5" fill="#555" font-weight="600">五彩池</text>
-        <text x="12" y="80" font-size="7" fill="#c08000">★色彩之最 40min</text>
+        <!-- 五彩池：(100,100) -->
+        <circle cx="100" cy="100" r="8" fill="#6ab0e8" stroke="#fff" stroke-width="2"/>
+        <text x="12" y="96" font-size="17" fill="#555" font-weight="600">五彩池</text>
+        <text x="12" y="113" font-size="14" fill="#c08000">★色彩之最 40min</text>
 
-        <!-- 长海→五彩池步行虚线 -->
-        <path d="M78 48 L72 62" stroke="#c0766c" stroke-width="1" fill="none" stroke-dasharray="3,2" marker-end="url(#aw)" opacity=".7"/>
-        <text x="35" y="58" font-size="6.5" fill="#c0766c" font-weight="600">步行</text>
+        <!-- 步行虚线 -->
+        <path d="M114 66 L103 88" stroke="#c0766c" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#aw)" opacity=".8"/>
+        <text x="55" y="82" font-size="13" fill="#c0766c" font-weight="600">步行</text>
 
-        <!-- 上季节海：曲线约 t=0.52 → (82,110) -->
-        <circle cx="82" cy="110" r="5" fill="#6ab0e8" stroke="#fff" stroke-width="1.5"/>
-        <text x="12" y="107" font-size="8.5" fill="#555" font-weight="600">上季节海</text>
-        <text x="12" y="119" font-size="7" fill="#999">车览</text>
+        <!-- 上季节海：(120,156) -->
+        <circle cx="120" cy="156" r="8" fill="#6ab0e8" stroke="#fff" stroke-width="2"/>
+        <text x="12" y="152" font-size="17" fill="#555" font-weight="600">上季节海</text>
+        <text x="12" y="169" font-size="14" fill="#999">车览</text>
 
-        <!-- 下季节海：曲线约 t=0.7 → (108,148) -->
-        <circle cx="108" cy="148" r="5" fill="#6ab0e8" stroke="#fff" stroke-width="1.5"/>
-        <text x="12" y="145" font-size="8.5" fill="#555" font-weight="600">下季节海</text>
-        <text x="12" y="157" font-size="7" fill="#999">车览</text>
+        <!-- 下季节海：(160,210) -->
+        <circle cx="160" cy="210" r="8" fill="#6ab0e8" stroke="#fff" stroke-width="2"/>
+        <text x="12" y="207" font-size="17" fill="#555" font-weight="600">下季节海</text>
+        <text x="12" y="224" font-size="14" fill="#999">车览</text>
 
         <!-- 左支标注 -->
-        <text x="10" y="172" font-size="7.5" fill="#3a8fc7" font-weight="700">左支 · 则查洼沟</text>
-        <text x="10" y="184" font-size="6.5" fill="#4a9fe8">去程实线↑回程虚线↓</text>
+        <text x="12" y="248" font-size="15" fill="#3a8fc7" font-weight="700">左支 · 则查洼沟</text>
+        <text x="12" y="265" font-size="13" fill="#4a9fe8">去程实线↑  回程虚线↓</text>
 
-        <!-- ===== 右支节点（全部在粗曲线上） ===== -->
-        <!-- 原始森林：曲线终点 (298,42) -->
-        <circle cx="298" cy="42" r="5" fill="#5cb85c" stroke="#fff" stroke-width="1.5"/>
-        <text x="312" y="38" font-size="8.5" fill="#555" font-weight="600">原始森林</text>
-        <text x="312" y="50" font-size="7" fill="#999">可跳过</text>
+        <!-- ============ 右支节点 ============ -->
+        <circle cx="444" cy="58" r="8" fill="#5cb85c" stroke="#fff" stroke-width="2"/>
+        <text x="456" y="54" font-size="17" fill="#555" font-weight="600">原始森林</text>
+        <text x="456" y="71" font-size="14" fill="#999">可跳过</text>
 
-        <!-- 箭竹海：右支曲线约 t=0.3 → (306,72) -->
-        <circle cx="306" cy="72" r="5" fill="#5cb85c" stroke="#fff" stroke-width="1.5"/>
-        <text x="312" y="69" font-size="8.5" fill="#555" font-weight="600">箭竹海</text>
-        <text x="312" y="81" font-size="7" fill="#c08000">★必下 40min</text>
+        <!-- 箭竹海：(452,100) -->
+        <circle cx="452" cy="100" r="8" fill="#5cb85c" stroke="#fff" stroke-width="2"/>
+        <text x="464" y="96" font-size="17" fill="#555" font-weight="600">箭竹海</text>
+        <text x="464" y="113" font-size="14" fill="#c08000">★必下 40min</text>
 
-        <!-- 熊猫海：曲线约 t=0.47 → (296,110) -->
-        <circle cx="296" cy="110" r="5" fill="#5cb85c" stroke="#fff" stroke-width="1.5"/>
-        <text x="312" y="107" font-size="8.5" fill="#555" font-weight="600">熊猫海</text>
-        <text x="312" y="119" font-size="7" fill="#c08000">★必下 30min</text>
+        <!-- 熊猫海：(436,156) -->
+        <circle cx="436" cy="156" r="8" fill="#5cb85c" stroke="#fff" stroke-width="2"/>
+        <text x="448" y="152" font-size="17" fill="#555" font-weight="600">熊猫海</text>
+        <text x="448" y="169" font-size="14" fill="#c08000">★必下 30min</text>
 
-        <!-- 五花海：曲线约 t=0.62 → (280,142) -->
-        <circle cx="280" cy="142" r="7" fill="#4caf50" stroke="#fff" stroke-width="2"/>
-        <text x="312" y="136" font-size="9" fill="#333" font-weight="700">五花海</text>
-        <text x="312" y="148" font-size="7" fill="#c08000">★★镇沟之宝 60min</text>
+        <!-- 五花海：(414,204) -->
+        <circle cx="414" cy="204" r="11" fill="#4caf50" stroke="#fff" stroke-width="2.5"/>
+        <text x="428" y="198" font-size="18" fill="#333" font-weight="700">五花海</text>
+        <text x="428" y="215" font-size="14" fill="#c08000">★★镇沟之宝 60min</text>
 
-        <!-- 珍珠滩：曲线约 t=0.78 → (248,174) -->
-        <circle cx="248" cy="174" r="5" fill="#5cb85c" stroke="#fff" stroke-width="1.5"/>
-        <text x="156" y="172" font-size="8.5" fill="#555" font-weight="600">珍珠滩</text>
-        <text x="156" y="184" font-size="7" fill="#c08000">★西游记取景 40min</text>
+        <!-- 珍珠滩：(364,250) -->
+        <circle cx="364" cy="250" r="8" fill="#5cb85c" stroke="#fff" stroke-width="2"/>
+        <text x="228" y="247" font-size="17" fill="#555" font-weight="600">珍珠滩</text>
+        <text x="228" y="264" font-size="14" fill="#c08000">★西游记取景 40min</text>
 
-        <!-- 镜海：曲线约 t=0.9 → (210,218) -->
-        <circle cx="210" cy="218" r="5" fill="#5cb85c" stroke="#fff" stroke-width="1.5"/>
-        <text x="132" y="216" font-size="8.5" fill="#888" font-weight="600">镜海</text>
-        <text x="132" y="228" font-size="7" fill="#e57373">☔雨天放弃</text>
+        <!-- 镜海：(312,310) -->
+        <circle cx="312" cy="310" r="8" fill="#5cb85c" stroke="#fff" stroke-width="2"/>
+        <text x="196" y="308" font-size="17" fill="#888" font-weight="600">镜海</text>
+        <text x="196" y="325" font-size="14" fill="#e57373">☔雨天放弃</text>
 
         <!-- 右支标注 -->
-        <text x="312" y="172" font-size="7.5" fill="#3a8a3a" font-weight="700">右支 · 日则沟</text>
-        <text x="312" y="184" font-size="6.5" fill="#4caf50">去程实线↑回程虚线↓</text>
+        <text x="350" y="248" font-size="15" fill="#3a8a3a" font-weight="700" text-anchor="end">右支 · 日则沟</text>
+        <text x="350" y="265" font-size="13" fill="#4caf50" text-anchor="end">去程实线↑  回程虚线↓</text>
 
         <!-- ============ 入口 ============ -->
-        <rect x="155" y="548" width="70" height="16" rx="8" fill="#88d8b0"/>
-        <text x="190" y="560" font-size="8.5" fill="#fff" text-anchor="middle" font-weight="700">景区入口</text>
+        <rect x="230" y="779" width="100" height="22" rx="11" fill="#88d8b0"/>
+        <text x="280" y="794" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">景区入口</text>
 
         <!-- ============ 图例 ============ -->
-        <rect x="8" y="500" width="165" height="42" rx="6" fill="rgba(255,255,255,.85)"/>
-        <text x="14" y="514" font-size="7.5" fill="#333" font-weight="700">图例</text>
-        <line x1="14" y1="522" x2="28" y2="522" stroke="#d4880a" stroke-width="1.4"/>
-        <text x="32" y="525" font-size="6.5" fill="#555">去程（实线箭头）</text>
-        <line x1="100" y1="522" x2="114" y2="522" stroke="#d4880a" stroke-width="1.2" stroke-dasharray="3,2"/>
-        <text x="118" y="525" font-size="6.5" fill="#555">回程（虚线箭头）</text>
-        <circle cx="14" cy="535" r="3.5" fill="#6ab0e8"/><text x="22" y="538" font-size="6.5" fill="#555">左支</text>
-        <circle cx="52" cy="535" r="3.5" fill="#5cb85c"/><text x="60" y="538" font-size="6.5" fill="#555">右支</text>
-        <circle cx="90" cy="535" r="3.5" fill="#f5a623"/><text x="98" y="538" font-size="6.5" fill="#555">中线</text>
-        <line x1="130" y1="535" x2="144" y2="535" stroke="#c0766c" stroke-width="1" stroke-dasharray="2,2"/>
-        <text x="148" y="538" font-size="6.5" fill="#555">步行</text>
+        <rect x="10" y="710" width="240" height="60" rx="8" fill="rgba(255,255,255,.88)"/>
+        <text x="18" y="728" font-size="15" fill="#333" font-weight="700">图例</text>
+        <line x1="18" y1="742" x2="40" y2="742" stroke="#d4880a" stroke-width="2"/>
+        <text x="46" y="746" font-size="13" fill="#555">去程（实线箭头）</text>
+        <line x1="140" y1="742" x2="162" y2="742" stroke="#d4880a" stroke-width="1.8" stroke-dasharray="5,3"/>
+        <text x="168" y="746" font-size="13" fill="#555">回程（虚线箭头）</text>
+        <circle cx="18" cy="759" r="5" fill="#6ab0e8"/><text x="28" y="763" font-size="13" fill="#555">左支</text>
+        <circle cx="72" cy="759" r="5" fill="#5cb85c"/><text x="82" y="763" font-size="13" fill="#555">右支</text>
+        <circle cx="126" cy="759" r="5" fill="#f5a623"/><text x="136" y="763" font-size="13" fill="#555">中线</text>
+        <line x1="178" y1="759" x2="200" y2="759" stroke="#c0766c" stroke-width="1.5" stroke-dasharray="3,3"/>
+        <text x="205" y="763" font-size="13" fill="#555">步行</text>
       </svg>
       <div style="font-size:.72rem;color:#888;text-align:center;margin-top:6px">九寨沟Y字型路线图 · 实线=去程方向 · 虚线=回程方向（点击放大）</div>
     </div>
